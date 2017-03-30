@@ -6,9 +6,9 @@
 //  Copyright © 2017年 liu_yakai. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LoginViewController.h"
 
-@interface ViewController ()
+@interface LoginViewController ()
 
 @end
 
