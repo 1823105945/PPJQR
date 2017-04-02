@@ -12,13 +12,17 @@
 
 @end
 
-@implementation ViewController
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)loginClock:(id)sender {
+    
+    [self performSegueWithIdentifier:@"Home" sender:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

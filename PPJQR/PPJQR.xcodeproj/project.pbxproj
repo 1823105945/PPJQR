@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE2238291E9131F8004194F8 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2238281E9131F8004194F8 /* HomeViewController.m */; };
+		DE22382D1E913397004194F8 /* HomeLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE22382C1E913397004194F8 /* HomeLeftView.m */; };
+		DE22382F1E9133AB004194F8 /* HomeLeftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE22382E1E9133AB004194F8 /* HomeLeftView.xib */; };
+		DE2238331E9135AC004194F8 /* HomeHeatView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2238321E9135AC004194F8 /* HomeHeatView.m */; };
+		DE2238351E9135B7004194F8 /* HomeHeatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2238341E9135B7004194F8 /* HomeHeatView.xib */; };
+		DE22383A1E9136CE004194F8 /* HomeLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2238381E9136CE004194F8 /* HomeLeftCell.m */; };
+		DE22383B1E9136CE004194F8 /* HomeLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2238391E9136CE004194F8 /* HomeLeftCell.xib */; };
 		DEEFFA691E8D55F8001F5D3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEFFA681E8D55F8001F5D3D /* main.m */; };
 		DEEFFA6C1E8D55F8001F5D3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEFFA6B1E8D55F8001F5D3D /* AppDelegate.m */; };
 		DEEFFA6F1E8D55F8001F5D3D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEFFA6E1E8D55F8001F5D3D /* LoginViewController.m */; };
@@ -18,6 +25,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE2238271E9131F8004194F8 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		DE2238281E9131F8004194F8 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		DE22382B1E913397004194F8 /* HomeLeftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeLeftView.h; sourceTree = "<group>"; };
+		DE22382C1E913397004194F8 /* HomeLeftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeLeftView.m; sourceTree = "<group>"; };
+		DE22382E1E9133AB004194F8 /* HomeLeftView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeLeftView.xib; sourceTree = "<group>"; };
+		DE2238311E9135AC004194F8 /* HomeHeatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeatView.h; sourceTree = "<group>"; };
+		DE2238321E9135AC004194F8 /* HomeHeatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeatView.m; sourceTree = "<group>"; };
+		DE2238341E9135B7004194F8 /* HomeHeatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeatView.xib; sourceTree = "<group>"; };
+		DE2238371E9136CE004194F8 /* HomeLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeLeftCell.h; sourceTree = "<group>"; };
+		DE2238381E9136CE004194F8 /* HomeLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeLeftCell.m; sourceTree = "<group>"; };
+		DE2238391E9136CE004194F8 /* HomeLeftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeLeftCell.xib; sourceTree = "<group>"; };
+		DE22383C1E913874004194F8 /* PPJQR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPJQR.h; sourceTree = "<group>"; };
 		DEEFFA641E8D55F8001F5D3D /* PPJQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPJQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEEFFA681E8D55F8001F5D3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DEEFFA6A1E8D55F8001F5D3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -45,6 +64,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE2238261E9131D9004194F8 /* 主界面 */ = {
+			isa = PBXGroup;
+			children = (
+				DE22382A1E91337A004194F8 /* View */,
+				DE2238271E9131F8004194F8 /* HomeViewController.h */,
+				DE2238281E9131F8004194F8 /* HomeViewController.m */,
+			);
+			name = "主界面";
+			sourceTree = "<group>";
+		};
+		DE22382A1E91337A004194F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE22382B1E913397004194F8 /* HomeLeftView.h */,
+				DE22382C1E913397004194F8 /* HomeLeftView.m */,
+				DE22382E1E9133AB004194F8 /* HomeLeftView.xib */,
+				DE2238311E9135AC004194F8 /* HomeHeatView.h */,
+				DE2238321E9135AC004194F8 /* HomeHeatView.m */,
+				DE2238341E9135B7004194F8 /* HomeHeatView.xib */,
+				DE2238371E9136CE004194F8 /* HomeLeftCell.h */,
+				DE2238381E9136CE004194F8 /* HomeLeftCell.m */,
+				DE2238391E9136CE004194F8 /* HomeLeftCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		DEEFFA5B1E8D55F8001F5D3D = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +109,7 @@
 		DEEFFA661E8D55F8001F5D3D /* PPJQR */ = {
 			isa = PBXGroup;
 			children = (
+				DE2238261E9131D9004194F8 /* 主界面 */,
 				DEEFFA7F1E8D57C6001F5D3D /* BaseViewController */,
 				DEEFFA7E1E8D5798001F5D3D /* 登录 */,
 				DEEFFA6A1E8D55F8001F5D3D /* AppDelegate.h */,
@@ -81,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				DEEFFA681E8D55F8001F5D3D /* main.m */,
+				DE22383C1E913874004194F8 /* PPJQR.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -164,9 +211,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE22382F1E9133AB004194F8 /* HomeLeftView.xib in Resources */,
 				DEEFFA771E8D55F8001F5D3D /* LaunchScreen.storyboard in Resources */,
 				DEEFFA741E8D55F8001F5D3D /* Assets.xcassets in Resources */,
+				DE22383B1E9136CE004194F8 /* HomeLeftCell.xib in Resources */,
 				DEEFFA721E8D55F8001F5D3D /* Main.storyboard in Resources */,
+				DE2238351E9135B7004194F8 /* HomeHeatView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +232,10 @@
 				DEEFFA6C1E8D55F8001F5D3D /* AppDelegate.m in Sources */,
 				DEEFFA691E8D55F8001F5D3D /* main.m in Sources */,
 				DEEFFA851E8D5805001F5D3D /* BaseNaviViewController.m in Sources */,
+				DE22383A1E9136CE004194F8 /* HomeLeftCell.m in Sources */,
+				DE22382D1E913397004194F8 /* HomeLeftView.m in Sources */,
+				DE2238291E9131F8004194F8 /* HomeViewController.m in Sources */,
+				DE2238331E9135AC004194F8 /* HomeHeatView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

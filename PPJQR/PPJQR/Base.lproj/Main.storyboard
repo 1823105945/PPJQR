@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GAo-Zn-rb5">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -34,15 +34,63 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmn-nO-926">
+                                <rect key="frame" x="42" y="495" width="206" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="loginClock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RB4-7D-hjk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="mEr-bi-gtx"/>
+                    <connections>
+                        <segue destination="c2P-gF-ZJy" kind="push" identifier="Home" id="B2F-Jj-aOs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="110"/>
+            <point key="canvasLocation" x="125.59999999999999" y="109.29535232383809"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="sP5-JN-Ftl">
+            <objects>
+                <viewController id="c2P-gF-ZJy" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GgF-Rx-jWY"/>
+                        <viewControllerLayoutGuide type="bottom" id="eA8-bj-GxR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hzD-P5-gDa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sln-0g-6y5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="c2P-gF-ZJy" id="czu-zV-NVZ"/>
+                                    <outlet property="delegate" destination="c2P-gF-ZJy" id="KRb-YY-8wL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eA8-bj-GxR" firstAttribute="top" secondItem="Sln-0g-6y5" secondAttribute="bottom" constant="44" id="A87-Et-lhe"/>
+                            <constraint firstItem="Sln-0g-6y5" firstAttribute="leading" secondItem="hzD-P5-gDa" secondAttribute="leading" id="Qlr-T9-edc"/>
+                            <constraint firstItem="Sln-0g-6y5" firstAttribute="top" secondItem="hzD-P5-gDa" secondAttribute="top" id="b31-e0-5bE"/>
+                            <constraint firstAttribute="trailing" secondItem="Sln-0g-6y5" secondAttribute="trailing" id="m83-nR-OmG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wdV-qQ-XU8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="77i-gJ-DXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881.25" y="108.75"/>
         </scene>
     </scenes>
 </document>
