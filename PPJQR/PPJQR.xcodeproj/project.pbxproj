@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0A5956A623631CA8C1E083 /* libPods-PPJQR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D66D02F8966943CA8ADA271 /* libPods-PPJQR.a */; };
 		DE2238291E9131F8004194F8 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2238281E9131F8004194F8 /* HomeViewController.m */; };
 		DE22382D1E913397004194F8 /* HomeLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE22382C1E913397004194F8 /* HomeLeftView.m */; };
 		DE22382F1E9133AB004194F8 /* HomeLeftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE22382E1E9133AB004194F8 /* HomeLeftView.xib */; };
@@ -25,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D2115B64C0613FDC4C1A439 /* Pods-PPJQR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPJQR.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPJQR/Pods-PPJQR.release.xcconfig"; sourceTree = "<group>"; };
+		89837CB44028497EC395DC18 /* Pods-PPJQR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPJQR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PPJQR/Pods-PPJQR.debug.xcconfig"; sourceTree = "<group>"; };
+		8D66D02F8966943CA8ADA271 /* libPods-PPJQR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PPJQR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2238271E9131F8004194F8 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		DE2238281E9131F8004194F8 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		DE22382B1E913397004194F8 /* HomeLeftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeLeftView.h; sourceTree = "<group>"; };
@@ -58,12 +62,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB0A5956A623631CA8C1E083 /* libPods-PPJQR.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		208712934D5F8C1E5D685604 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89837CB44028497EC395DC18 /* Pods-PPJQR.debug.xcconfig */,
+				4D2115B64C0613FDC4C1A439 /* Pods-PPJQR.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		73A843E79E59A2720AD4B3AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D66D02F8966943CA8ADA271 /* libPods-PPJQR.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DE2238261E9131D9004194F8 /* 主界面 */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +117,8 @@
 			children = (
 				DEEFFA661E8D55F8001F5D3D /* PPJQR */,
 				DEEFFA651E8D55F8001F5D3D /* Products */,
+				208712934D5F8C1E5D685604 /* Pods */,
+				73A843E79E59A2720AD4B3AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEEFFA7B1E8D55F8001F5D3D /* Build configuration list for PBXNativeTarget "PPJQR" */;
 			buildPhases = (
+				097A5F60701EAF5FF2A03203 /* [CP] Check Pods Manifest.lock */,
 				DEEFFA601E8D55F8001F5D3D /* Sources */,
 				DEEFFA611E8D55F8001F5D3D /* Frameworks */,
 				DEEFFA621E8D55F8001F5D3D /* Resources */,
+				92818957019254BDCE304A30 /* [CP] Embed Pods Frameworks */,
+				0302C5C0A06E097DB83568C7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -221,6 +248,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0302C5C0A06E097DB83568C7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PPJQR/Pods-PPJQR-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		097A5F60701EAF5FF2A03203 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		92818957019254BDCE304A30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PPJQR/Pods-PPJQR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DEEFFA601E8D55F8001F5D3D /* Sources */ = {
@@ -353,6 +428,7 @@
 		};
 		DEEFFA7C1E8D55F8001F5D3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89837CB44028497EC395DC18 /* Pods-PPJQR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4WPU7W4QPA;
@@ -366,6 +442,7 @@
 		};
 		DEEFFA7D1E8D55F8001F5D3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D2115B64C0613FDC4C1A439 /* Pods-PPJQR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4WPU7W4QPA;
