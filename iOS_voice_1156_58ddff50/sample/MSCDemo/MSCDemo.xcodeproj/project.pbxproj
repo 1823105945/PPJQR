@@ -448,7 +448,7 @@
 				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					E9706F31175F383E003B76FC = {
-						DevelopmentTeam = 4WPU7W4QPA;
+						DevelopmentTeam = 8V5T4ELF29;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -632,7 +632,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4WPU7W4QPA;
+				DEVELOPMENT_TEAM = 8V5T4ELF29;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -646,7 +646,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.demo.PPJQR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lineway.LIVE;
 				PRODUCT_NAME = MSCDemo;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -666,7 +666,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4WPU7W4QPA;
+				DEVELOPMENT_TEAM = 8V5T4ELF29;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -680,7 +680,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.demo.PPJQR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lineway.LIVE;
 				PRODUCT_NAME = MSCDemo;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
