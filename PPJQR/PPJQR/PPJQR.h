@@ -14,4 +14,6 @@
 #define ViewScreen [[UIScreen mainScreen] bounds]
 #define ViewSize self.view.frame.size
 #define SETIMAGENAME(Name) [UIImage imageNamed:Name]
+
+#define APPID_VALUE           @"58ddff50"
 #endif /* PPJQR_h */
