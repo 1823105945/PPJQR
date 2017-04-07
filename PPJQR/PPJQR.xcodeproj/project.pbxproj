@@ -15,6 +15,8 @@
 		DE2238351E9135B7004194F8 /* HomeHeatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2238341E9135B7004194F8 /* HomeHeatView.xib */; };
 		DE22383A1E9136CE004194F8 /* HomeLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2238381E9136CE004194F8 /* HomeLeftCell.m */; };
 		DE22383B1E9136CE004194F8 /* HomeLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2238391E9136CE004194F8 /* HomeLeftCell.xib */; };
+		DE714E161E9672B60002B07D /* IATConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DE714E151E9672B60002B07D /* IATConfig.m */; };
+		DE714E191E9676B90002B07D /* ISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DE714E181E9676B90002B07D /* ISRDataHelper.m */; };
 		DEA1D6A31E953248008F36D5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6A21E953248008F36D5 /* libz.tbd */; };
 		DEA1D6A51E953261008F36D5 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6A41E953261008F36D5 /* iflyMSC.framework */; };
 		DEA1D6A71E953273008F36D5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6A61E953273008F36D5 /* CoreLocation.framework */; };
@@ -54,6 +56,10 @@
 		DE2238381E9136CE004194F8 /* HomeLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeLeftCell.m; sourceTree = "<group>"; };
 		DE2238391E9136CE004194F8 /* HomeLeftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeLeftCell.xib; sourceTree = "<group>"; };
 		DE22383C1E913874004194F8 /* PPJQR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPJQR.h; sourceTree = "<group>"; };
+		DE714E141E9672B60002B07D /* IATConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATConfig.h; sourceTree = "<group>"; };
+		DE714E151E9672B60002B07D /* IATConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATConfig.m; sourceTree = "<group>"; };
+		DE714E171E9676B90002B07D /* ISRDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISRDataHelper.h; sourceTree = "<group>"; };
+		DE714E181E9676B90002B07D /* ISRDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISRDataHelper.m; sourceTree = "<group>"; };
 		DEA1D6A21E953248008F36D5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		DEA1D6A41E953261008F36D5 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		DEA1D6A61E953273008F36D5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -141,6 +147,7 @@
 		DE2238261E9131D9004194F8 /* 主界面 */ = {
 			isa = PBXGroup;
 			children = (
+				DE714E131E9672A90002B07D /* Model */,
 				DE22382A1E91337A004194F8 /* View */,
 				DE2238271E9131F8004194F8 /* HomeViewController.h */,
 				DE2238281E9131F8004194F8 /* HomeViewController.m */,
@@ -162,6 +169,17 @@
 				DE2238391E9136CE004194F8 /* HomeLeftCell.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		DE714E131E9672A90002B07D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE714E171E9676B90002B07D /* ISRDataHelper.h */,
+				DE714E181E9676B90002B07D /* ISRDataHelper.m */,
+				DE714E141E9672B60002B07D /* IATConfig.h */,
+				DE714E151E9672B60002B07D /* IATConfig.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		DEEFFA5B1E8D55F8001F5D3D = {
@@ -364,7 +382,9 @@
 				DEEFFA6C1E8D55F8001F5D3D /* AppDelegate.m in Sources */,
 				DEEFFA691E8D55F8001F5D3D /* main.m in Sources */,
 				DEEFFA851E8D5805001F5D3D /* BaseNaviViewController.m in Sources */,
+				DE714E191E9676B90002B07D /* ISRDataHelper.m in Sources */,
 				DE22383A1E9136CE004194F8 /* HomeLeftCell.m in Sources */,
+				DE714E161E9672B60002B07D /* IATConfig.m in Sources */,
 				DE22382D1E913397004194F8 /* HomeLeftView.m in Sources */,
 				DE2238291E9131F8004194F8 /* HomeViewController.m in Sources */,
 				DE2238331E9135AC004194F8 /* HomeHeatView.m in Sources */,
@@ -489,7 +509,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4WPU7W4QPA;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -509,7 +529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4WPU7W4QPA;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

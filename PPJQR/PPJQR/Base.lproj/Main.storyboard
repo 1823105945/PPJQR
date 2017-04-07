@@ -77,6 +77,38 @@
                                     <outlet property="delegate" destination="c2P-gF-ZJy" id="KRb-YY-8wL"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gn-J8-6UG">
+                                <rect key="frame" x="10" y="444" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="中文会话"/>
+                                <connections>
+                                    <action selector="conversation:" destination="c2P-gF-ZJy" eventType="touchUpInside" id="LFf-fS-2Lm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiF-hk-7BB">
+                                <rect key="frame" x="199" y="444" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="中译英"/>
+                                <connections>
+                                    <action selector="cnEntranslation:" destination="c2P-gF-ZJy" eventType="touchUpInside" id="VYi-b8-L7r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdE-GE-GxM">
+                                <rect key="frame" x="266" y="444" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="英译中"/>
+                                <connections>
+                                    <action selector="Encntranslation:" destination="c2P-gF-ZJy" eventType="touchUpInside" id="14k-zw-oK2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuY-8r-NR8">
+                                <rect key="frame" x="108" y="444" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="英文会话"/>
+                                <connections>
+                                    <action selector="enconversation:" destination="c2P-gF-ZJy" eventType="touchUpInside" id="5g5-ye-gcQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
