@@ -15,5 +15,5 @@
 #define ViewSize self.view.frame.size
 #define SETIMAGENAME(Name) [UIImage imageNamed:Name]
 
-#define APPID_VALUE           @"58ddff50"
+#define APPID_VALUE           @"58e7883f"
 #endif /* PPJQR_h */

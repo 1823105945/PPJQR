@@ -10,28 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PPJQR/HomeViewController.m"
-            timestampString = "513183017.987488"
+            timestampString = "513262778.63109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "-onResults:isLast:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PPJQR/HomeViewController.m"
-            timestampString = "513183321.04645"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
-            landmarkName = "-onError:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
