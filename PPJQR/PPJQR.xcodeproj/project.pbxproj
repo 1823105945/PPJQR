@@ -27,6 +27,8 @@
 		DEA1D6B71E953353008F36D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6B61E953353008F36D5 /* Foundation.framework */; };
 		DEA1D6B91E953362008F36D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6B81E953362008F36D5 /* CoreGraphics.framework */; };
 		DEA1D6BD1E95350A008F36D5 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6BC1E95350A008F36D5 /* Contacts.framework */; };
+		DEDC7F851E99F59400DD2FC4 /* PcmPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC7F841E99F59400DD2FC4 /* PcmPlayer.m */; };
+		DEDC7F881E99F71B00DD2FC4 /* TTSConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC7F871E99F71A00DD2FC4 /* TTSConfig.m */; };
 		DEEFFA691E8D55F8001F5D3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEFFA681E8D55F8001F5D3D /* main.m */; };
 		DEEFFA6C1E8D55F8001F5D3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEFFA6B1E8D55F8001F5D3D /* AppDelegate.m */; };
 		DEEFFA6F1E8D55F8001F5D3D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEFFA6E1E8D55F8001F5D3D /* LoginViewController.m */; };
@@ -67,6 +69,10 @@
 		DEA1D6B61E953353008F36D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEA1D6B81E953362008F36D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DEA1D6BC1E95350A008F36D5 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		DEDC7F831E99F59400DD2FC4 /* PcmPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PcmPlayer.h; sourceTree = "<group>"; };
+		DEDC7F841E99F59400DD2FC4 /* PcmPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PcmPlayer.m; sourceTree = "<group>"; };
+		DEDC7F861E99F71A00DD2FC4 /* TTSConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSConfig.h; sourceTree = "<group>"; };
+		DEDC7F871E99F71A00DD2FC4 /* TTSConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSConfig.m; sourceTree = "<group>"; };
 		DEEFFA641E8D55F8001F5D3D /* PPJQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPJQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEEFFA681E8D55F8001F5D3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DEEFFA6A1E8D55F8001F5D3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -144,8 +150,7 @@
 		DE2238261E9131D9004194F8 /* 主界面 */ = {
 			isa = PBXGroup;
 			children = (
-				DEF6C20D1E97C3A90063D21B /* IATConfig.h */,
-				DEF6C20E1E97C3A90063D21B /* IATConfig.m */,
+				DEDC7F821E99F57700DD2FC4 /* Tools */,
 				DE714E131E9672A90002B07D /* Model */,
 				DE22382A1E91337A004194F8 /* View */,
 				DE2238271E9131F8004194F8 /* HomeViewController.h */,
@@ -175,6 +180,19 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		DEDC7F821E99F57700DD2FC4 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				DEDC7F861E99F71A00DD2FC4 /* TTSConfig.h */,
+				DEDC7F871E99F71A00DD2FC4 /* TTSConfig.m */,
+				DEF6C20D1E97C3A90063D21B /* IATConfig.h */,
+				DEF6C20E1E97C3A90063D21B /* IATConfig.m */,
+				DEDC7F831E99F59400DD2FC4 /* PcmPlayer.h */,
+				DEDC7F841E99F59400DD2FC4 /* PcmPlayer.m */,
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 		DEEFFA5B1E8D55F8001F5D3D = {
@@ -375,6 +393,7 @@
 				DEEFFA6F1E8D55F8001F5D3D /* LoginViewController.m in Sources */,
 				DEEFFA821E8D57EB001F5D3D /* BaseViewController.m in Sources */,
 				DEEFFA6C1E8D55F8001F5D3D /* AppDelegate.m in Sources */,
+				DEDC7F881E99F71B00DD2FC4 /* TTSConfig.m in Sources */,
 				DEEFFA691E8D55F8001F5D3D /* main.m in Sources */,
 				DEEFFA851E8D5805001F5D3D /* BaseNaviViewController.m in Sources */,
 				DE22383A1E9136CE004194F8 /* HomeLeftCell.m in Sources */,
@@ -382,6 +401,7 @@
 				DE22382D1E913397004194F8 /* HomeLeftView.m in Sources */,
 				DE2238291E9131F8004194F8 /* HomeViewController.m in Sources */,
 				DE2238331E9135AC004194F8 /* HomeHeatView.m in Sources */,
+				DEDC7F851E99F59400DD2FC4 /* PcmPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

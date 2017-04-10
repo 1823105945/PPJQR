@@ -10,11 +10,19 @@
 #import "PPJQR.h"
 #import "iflyMSC/IFlyMSC.h"
 #import "IATConfig.h"
+#import "PcmPlayer.h"
+#import "TTSConfig.h"
 
-@interface HomeViewController ()<IFlySpeechRecognizerDelegate>
+@interface HomeViewController ()<IFlySpeechRecognizerDelegate,IFlySpeechSynthesizerDelegate>
 //语音语义理解对象
 @property (nonatomic,strong) IFlySpeechUnderstander *iFlySpeechUnderstander;
 @property (nonatomic, strong) NSMutableArray *resultArray;
+@property (nonatomic, strong) NSString *uriPath;
+@property (nonatomic, strong) PcmPlayer *audioPlayer;
+@property (nonatomic, strong) IFlySpeechSynthesizer * iFlySpeechSynthesizer;
+@property (nonatomic, assign) Status state;
+@property (nonatomic, assign) SynthesizeType synType;
+
 @end
 
 @implementation HomeViewController
@@ -105,9 +113,20 @@
     for (NSString *key in dic) {
         [result appendFormat:@"%@",key];
     }
-    
     NSLog(@"听写结果：%@",result);
+    [self hecheng];
+}
+
+//语音合成
+-(void)hecheng{
+    _iFlySpeechSynthesizer.delegate = self;
     
+    
+    [_iFlySpeechSynthesizer startSpeaking:@"爸爸妈妈说实诚不叫傻"];
+    if (_iFlySpeechSynthesizer.isSpeaking) {
+        _state = Playing;
+    }
+
 }
 
 -(void)_init{
@@ -153,9 +172,152 @@
     }
 }
 
+-(void)_initSpeechSynthesis{
+    //     使用-(void)synthesize:(NSString *)text toUri:(NSString*)uri接口时， uri 需设置为保存音频的完整路径
+    //     若uri设为nil,则默认的音频保存在library/cache下
+    NSString *prePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    //uri合成路径设置
+    _uriPath = [NSString stringWithFormat:@"%@/%@",prePath,@"uri.pcm"];
+    //pcm播放器初始化
+    _audioPlayer = [[PcmPlayer alloc] init];
+
+}
+
+/**
+ 开始播放回调
+ 注：
+ 对通用合成方式有效，
+ 对uri合成无效
+ ****/
+- (void)onSpeakBegin
+{
+
+    if (_state  != Playing) {
+
+    }
+    _state = Playing;
+}
+/**
+ 缓冲进度回调
+ 
+ progress 缓冲进度
+ msg 附加信息
+ 注：
+ 对通用合成方式有效，
+ 对uri合成无效
+ ****/
+- (void)onBufferProgress:(int) progress message:(NSString *)msg
+{
+    NSLog(@"buffer progress %2d%%. msg: %@.", progress, msg);
+}
+
+/**
+ 播放进度回调
+ 
+ progress 缓冲进度
+ 
+ 注：
+ 对通用合成方式有效，
+ 对uri合成无效
+ ****/
+- (void) onSpeakProgress:(int) progress beginPos:(int)beginPos endPos:(int)endPos
+{
+    NSLog(@"speak progress %2d%%.", progress);
+}
+
+
+/**
+ 合成结束（完成）回调
+ 
+ 对uri合成添加播放的功能
+ ****/
+- (void)onCompleted:(IFlySpeechError *) error
+{
+    NSLog(@"%s,error=%d",__func__,error.errorCode);
+    
+    if (error.errorCode != 0) {
+//        [_popUpView showText:[NSString stringWithFormat:@"错误码:%d",error.errorCode]];
+        return;
+    }
+    NSString *text ;
+     if (error.errorCode == 0) {
+        text = @"合成结束";
+    }else {
+        text = [NSString stringWithFormat:@"发生错误：%d %@",error.errorCode,error.errorDesc];
+        NSLog(@"%@",text);
+    }
+    
+    
+    _state = NotStart;
+    
+//    if (_synType == UriType) {//Uri合成类型
+//        
+//        NSFileManager *fm = [NSFileManager defaultManager];
+//        if ([fm fileExistsAtPath:_uriPath]) {
+//            [self playUriAudio];//播放合成的音频
+//        }
+//    }
+}
+
+
+#pragma mark - 设置合成参数
+- (void)initSynthesizer
+{
+    TTSConfig *instance = [TTSConfig sharedInstance];
+    if (instance == nil) {
+        return;
+    }
+    
+    //合成服务单例
+    if (_iFlySpeechSynthesizer == nil) {
+        _iFlySpeechSynthesizer = [IFlySpeechSynthesizer sharedInstance];
+    }
+    
+    _iFlySpeechSynthesizer.delegate = self;
+    
+    //设置语速1-100
+    [_iFlySpeechSynthesizer setParameter:instance.speed forKey:[IFlySpeechConstant SPEED]];
+    
+    //设置音量1-100
+    [_iFlySpeechSynthesizer setParameter:instance.volume forKey:[IFlySpeechConstant VOLUME]];
+    
+    //设置音调1-100
+    [_iFlySpeechSynthesizer setParameter:instance.pitch forKey:[IFlySpeechConstant PITCH]];
+    
+    //设置采样率
+    [_iFlySpeechSynthesizer setParameter:instance.sampleRate forKey:[IFlySpeechConstant SAMPLE_RATE]];
+    
+    //设置发音人
+    [_iFlySpeechSynthesizer setParameter:instance.vcnName forKey:[IFlySpeechConstant VOICE_NAME]];
+    
+    //设置文本编码格式
+    [_iFlySpeechSynthesizer setParameter:@"unicode" forKey:[IFlySpeechConstant TEXT_ENCODING]];
+    
+    
+    NSDictionary* languageDic=@{@"Guli":@"text_uighur", //维语
+                                @"XiaoYun":@"text_vietnam",//越南语
+                                @"Abha":@"text_hindi",//印地语
+                                @"Gabriela":@"text_spanish",//西班牙语
+                                @"Allabent":@"text_russian",//俄语
+                                @"Mariane":@"text_french"};//法语
+    
+    NSString* textNameKey=[languageDic valueForKey:instance.vcnName];
+    NSString* textSample=nil;
+    
+    if(textNameKey && [textNameKey length]>0){
+        textSample=NSLocalizedStringFromTable(textNameKey, @"tts/tts", nil);
+    }else{
+        textSample=NSLocalizedStringFromTable(@"text_chinese", @"tts/tts", nil);
+    }
+    NSLog(@"%@",textSample);
+//    [_textView setText:textSample];
+    
+}
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self initRecognizer];
+    [self initSynthesizer];
 }
 
 - (void)viewDidLoad {
