@@ -12,8 +12,13 @@
 #import "IATConfig.h"
 #import "PcmPlayer.h"
 #import "TTSConfig.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface HomeViewController ()<IFlySpeechRecognizerDelegate,IFlySpeechSynthesizerDelegate>
+@interface HomeViewController ()<IFlySpeechRecognizerDelegate,IFlySpeechSynthesizerDelegate,UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>{
+    UIScrollView *homeScrollView;
+    UITableView *homeTableView;
+    AVAudioRecorder *_audioRecorder;
+}
 //语音语义理解对象
 @property (nonatomic,strong) IFlySpeechUnderstander *iFlySpeechUnderstander;
 @property (nonatomic, strong) NSMutableArray *resultArray;
@@ -22,6 +27,8 @@
 @property (nonatomic, strong) IFlySpeechSynthesizer * iFlySpeechSynthesizer;
 @property (nonatomic, assign) Status state;
 @property (nonatomic, assign) SynthesizeType synType;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *homeSegmentedContor;
+@property (weak, nonatomic) IBOutlet UILabel *selectView;
 
 @end
 
@@ -65,6 +72,16 @@
 - (IBAction)Encntranslation:(id)sender {
     
 }
+- (IBAction)homeClock:(id)sender {
+    UISegmentedControl *segmentedControl=(UISegmentedControl *)sender;
+    if (segmentedControl.selectedSegmentIndex==0) {
+        self.selectView.frame=CGRectMake(0, 0, ViewSize.width/2, 1);
+    }else{
+        self.selectView.frame=CGRectMake(ViewSize.width/2, 0, ViewSize.width/2, 1);
+    }
+}
+
+
 /**
  语义理解服务结束回调（注：无论是否正确都会回调）
  error.errorCode =
@@ -331,10 +348,32 @@
     NSDictionary *dict6 = [NSDictionary dictionaryWithObjectsAndKeys:@"rhl",@"name",@"大数据测试，长数据测试，大数据测试，长数据测试，大数据测试，长数据测试，大数据测试，长数据测试，大数据测试，长数据测试，大数据测试，长数据测试。",@"content", nil];
     
     _resultArray = [NSMutableArray arrayWithObjects:dict,dict1,dict2,dict3,dict4,dict5,dict6, nil];
-
+    [self initUI];
 }
 
-
+-(void)initUI{
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:RGBA(0, 0, 0,1),UITextAttributeTextColor,nil];
+    [self.homeSegmentedContor setTitleTextAttributes:dic forState:UIControlStateSelected];
+    NSDictionary *dics = [NSDictionary dictionaryWithObjectsAndKeys:RGBA(0, 0, 0,1),UITextAttributeTextColor,nil];
+    [self.homeSegmentedContor setTitleTextAttributes:dics forState:UIControlStateNormal];
+    self.homeSegmentedContor.tintColor = [UIColor whiteColor];
+    homeScrollView=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 200, ViewSize.width, ViewSize.height-244)];
+    homeScrollView.delegate=self;
+    homeScrollView.backgroundColor=[UIColor redColor];
+    homeScrollView.contentSize=CGSizeMake(ViewSize.width*2,0 );
+    homeScrollView.pagingEnabled=YES;
+    [self.view addSubview:homeScrollView];
+    homeTableView=[[UITableView alloc]initWithFrame:CGRectMake(ViewSize.width, 0, ViewSize.width, homeScrollView.frame.size.height)];
+    homeTableView.delegate=self;
+    homeTableView.dataSource=self;
+    [homeScrollView addSubview:homeTableView];
+    
+}
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    CGPoint point = scrollView.contentOffset;
+    self.homeSegmentedContor.selectedSegmentIndex=point.x/ViewSize.width;
+    self.selectView.frame=CGRectMake(point.x/ViewSize.width*ViewSize.width/2, 199, ViewSize.width/2, 1);
+}
 //泡泡文本
 - (UIView *)bubbleView:(NSString *)text from:(BOOL)fromSelf withPosition:(int)position{
     

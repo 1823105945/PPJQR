@@ -12,7 +12,7 @@
         <!--Base Navi View Controller-->
         <scene sceneID="tz7-su-bkW">
             <objects>
-                <navigationController id="GAo-Zn-rb5" customClass="BaseNaviViewController" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="GAo-Zn-rb5" customClass="BaseNaviViewController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eMD-Ry-mMF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -69,14 +69,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sln-0g-6y5">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="c2P-gF-ZJy" id="czu-zV-NVZ"/>
-                                    <outlet property="delegate" destination="c2P-gF-ZJy" id="KRb-YY-8wL"/>
-                                </connections>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gn-J8-6UG">
                                 <rect key="frame" x="10" y="444" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -109,20 +101,39 @@
                                     <action selector="enconversation:" destination="c2P-gF-ZJy" eventType="touchUpInside" id="5g5-ye-gcQ"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7cH-MX-PHy">
+                                <rect key="frame" x="0.0" y="114" width="320" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="会话状态"/>
+                                    <segment title="查看聊天"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="homeClock:" destination="c2P-gF-ZJy" eventType="valueChanged" id="fxb-il-L2A"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRo-Uq-jIS">
+                                <rect key="frame" x="0.0" y="143" width="160" height="11"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="eA8-bj-GxR" firstAttribute="top" secondItem="Sln-0g-6y5" secondAttribute="bottom" constant="44" id="A87-Et-lhe"/>
-                            <constraint firstItem="Sln-0g-6y5" firstAttribute="leading" secondItem="hzD-P5-gDa" secondAttribute="leading" id="Qlr-T9-edc"/>
-                            <constraint firstItem="Sln-0g-6y5" firstAttribute="top" secondItem="hzD-P5-gDa" secondAttribute="top" id="b31-e0-5bE"/>
-                            <constraint firstAttribute="trailing" secondItem="Sln-0g-6y5" secondAttribute="trailing" id="m83-nR-OmG"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wdV-qQ-XU8"/>
+                    <connections>
+                        <outlet property="homeSegmentedContor" destination="7cH-MX-PHy" id="eau-sh-sK7"/>
+                        <outlet property="selectView" destination="kRo-Uq-jIS" id="K40-ZN-Nhe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="77i-gJ-DXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881.25" y="108.75"/>
+            <point key="canvasLocation" x="890.625" y="77.5"/>
         </scene>
     </scenes>
 </document>
