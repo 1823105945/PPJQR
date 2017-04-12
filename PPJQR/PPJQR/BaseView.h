@@ -10,7 +10,7 @@
 
 @interface BaseView : UIView
 //提示窗体
-+(void)_init:(NSString *)title View:(UIView *)view;
++(void)_init:(NSString *)title;
 
 +(BaseView *)baseShar;
 

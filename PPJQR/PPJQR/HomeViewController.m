@@ -13,12 +13,22 @@
 #import "PcmPlayer.h"
 #import "TTSConfig.h"
 #import <AVFoundation/AVFoundation.h>
+#import "Tools.h"
+#import "MoreResultsModel.h"
+#import "PlayModel.h"
+#import "WeatherModel.h"
+#import <FSAudioStream.h>
 
 @interface HomeViewController ()<IFlySpeechRecognizerDelegate,IFlySpeechSynthesizerDelegate,UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>{
     UIScrollView *homeScrollView;
     UITableView *homeTableView;
     AVAudioRecorder *_audioRecorder;
+    
 }
+@property(nonatomic,strong)NSString *returnType;
+@property(nonatomic,strong)MoreResultsModel *moreResultsModel;
+@property(nonatomic,strong)PlayModel *playModel;
+@property(nonatomic,strong)WeatherModel *weatherModel;
 //语音语义理解对象
 @property (nonatomic,strong) IFlySpeechUnderstander *iFlySpeechUnderstander;
 @property (nonatomic, strong) NSMutableArray *resultArray;
@@ -29,6 +39,9 @@
 @property (nonatomic, assign) SynthesizeType synType;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *homeSegmentedContor;
 @property (weak, nonatomic) IBOutlet UILabel *selectView;
+
+
+@property (nonatomic, strong) FSAudioStream *audioStream;
 
 @end
 
@@ -124,6 +137,7 @@
  ****/
 - (void) onResults:(NSArray *) results isLast:(BOOL)isLast
 {
+    __weak typeof(self)SelfWeek=self;
     NSMutableString *result = [[NSMutableString alloc] init];
     NSDictionary *dic = results [0];
     
@@ -131,11 +145,62 @@
         [result appendFormat:@"%@",key];
     }
     NSLog(@"听写结果：%@",result);
+    [Tools ANSWER:result success:^(id responseObject, NSString *type) {
+        SelfWeek.returnType=type;
+        if ([responseObject isKindOfClass:[MoreResultsModel class]]) {
+            SelfWeek.moreResultsModel=responseObject;
+            [SelfWeek speechSynthesis:SelfWeek.moreResultsModel.answer.text];
+        }else if ([responseObject isKindOfClass:[PlayModel class]]){
+            SelfWeek.playModel=responseObject;
+            if (SelfWeek.playModel.data.result>0) {
+               ResultModel *resultModel= [SelfWeek.playModel.data.result objectAtIndex:0];
+                [SelfWeek startPlay:resultModel.downloadUrl];
+            }
+            
+        }else if ([responseObject isKindOfClass:[WeatherModel class]]){
+            SelfWeek.weatherModel=responseObject;
+        }else{
+            
+        }
+    }];
 //    [self hecheng];
 }
 
+
+// 播放网络音频按钮
+- (void)startPlay:(NSString *)sender {
+    if (!_audioStream) {
+        [self playNetworkMusic:sender];
+    }
+    [_audioStream play];
+    
+}
+
+// 播放网络音频
+- (void)playNetworkMusic:(NSString *)url
+{
+    // 网络文件
+    
+    // 创建FSAudioStream对象
+    _audioStream=[[FSAudioStream alloc]initWithUrl:[NSURL URLWithString:url]];
+    _audioStream.onFailure=^(FSAudioStreamError error,NSString *description){
+        NSLog(@"播放过程中发生错误，错误信息：%@",description);
+    };
+    __weak typeof(self) weakSelf = self;
+    _audioStream.onCompletion=^(){
+        NSLog(@"播放完成!");
+        // 播放完移除对象，重新创建对象播放下一首
+        [weakSelf removeFromParentViewController];
+       
+    };
+    
+    // 设置声音
+    [_audioStream setVolume:1];
+    
+}
+
 //语音合成
--(void)hecheng{
+-(void)speechSynthesis:(NSString *)synthesis{
     _iFlySpeechSynthesizer.delegate = self;
     
     

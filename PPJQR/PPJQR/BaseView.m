@@ -27,7 +27,7 @@ static BaseView *baseView;
 }
 
 
-+(void)_init:(NSString *)title View:(UIView *)view{
++(void)_init:(NSString *)title{
     AppDelegate *app=(AppDelegate *)[[UIApplication sharedApplication]delegate];
     [app.window makeToast:title duration:2 position:@"center"];
 }

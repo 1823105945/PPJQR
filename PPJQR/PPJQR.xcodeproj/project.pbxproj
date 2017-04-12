@@ -28,7 +28,11 @@
 		DEA1D6B91E953362008F36D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6B81E953362008F36D5 /* CoreGraphics.framework */; };
 		DEA1D6BD1E95350A008F36D5 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6BC1E95350A008F36D5 /* Contacts.framework */; };
 		DECBF4E31E9E5ADD002A229B /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4E01E9E5ADD002A229B /* BaseView.m */; };
-		DECBF4E41E9E5ADD002A229B /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4E21E9E5ADD002A229B /* Toast+UIView.m */; };
+		DECBF4E41E9E5ADD002A229B /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4E21E9E5ADD002A229B /* Toast+UIView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DECBF4E71E9E6191002A229B /* MoreResultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4E61E9E6191002A229B /* MoreResultsModel.m */; };
+		DECBF4EA1E9E6470002A229B /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4E91E9E6470002A229B /* Tools.m */; };
+		DECBF4ED1E9E6ABC002A229B /* PlayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4EC1E9E6ABC002A229B /* PlayModel.m */; };
+		DECBF4F01E9E6BB1002A229B /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4EF1E9E6BB1002A229B /* WeatherModel.m */; };
 		DEDC7F851E99F59400DD2FC4 /* PcmPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC7F841E99F59400DD2FC4 /* PcmPlayer.m */; };
 		DEDC7F881E99F71B00DD2FC4 /* TTSConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC7F871E99F71A00DD2FC4 /* TTSConfig.m */; };
 		DEEFFA691E8D55F8001F5D3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEFFA681E8D55F8001F5D3D /* main.m */; };
@@ -75,6 +79,14 @@
 		DECBF4E01E9E5ADD002A229B /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
 		DECBF4E11E9E5ADD002A229B /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
 		DECBF4E21E9E5ADD002A229B /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
+		DECBF4E51E9E6191002A229B /* MoreResultsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreResultsModel.h; sourceTree = "<group>"; };
+		DECBF4E61E9E6191002A229B /* MoreResultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreResultsModel.m; sourceTree = "<group>"; };
+		DECBF4E81E9E6470002A229B /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		DECBF4E91E9E6470002A229B /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
+		DECBF4EB1E9E6ABC002A229B /* PlayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayModel.h; sourceTree = "<group>"; };
+		DECBF4EC1E9E6ABC002A229B /* PlayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayModel.m; sourceTree = "<group>"; };
+		DECBF4EE1E9E6BB1002A229B /* WeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
+		DECBF4EF1E9E6BB1002A229B /* WeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
 		DEDC7F831E99F59400DD2FC4 /* PcmPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PcmPlayer.h; sourceTree = "<group>"; };
 		DEDC7F841E99F59400DD2FC4 /* PcmPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PcmPlayer.m; sourceTree = "<group>"; };
 		DEDC7F861E99F71A00DD2FC4 /* TTSConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSConfig.h; sourceTree = "<group>"; };
@@ -156,7 +168,6 @@
 		DE2238261E9131D9004194F8 /* 主界面 */ = {
 			isa = PBXGroup;
 			children = (
-				DEDC7F821E99F57700DD2FC4 /* Tools */,
 				DE714E131E9672A90002B07D /* Model */,
 				DE22382A1E91337A004194F8 /* View */,
 				DE2238271E9131F8004194F8 /* HomeViewController.h */,
@@ -184,6 +195,12 @@
 		DE714E131E9672A90002B07D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DECBF4E51E9E6191002A229B /* MoreResultsModel.h */,
+				DECBF4E61E9E6191002A229B /* MoreResultsModel.m */,
+				DECBF4EB1E9E6ABC002A229B /* PlayModel.h */,
+				DECBF4EC1E9E6ABC002A229B /* PlayModel.m */,
+				DECBF4EE1E9E6BB1002A229B /* WeatherModel.h */,
+				DECBF4EF1E9E6BB1002A229B /* WeatherModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -201,6 +218,8 @@
 				DEF6C20E1E97C3A90063D21B /* IATConfig.m */,
 				DEDC7F831E99F59400DD2FC4 /* PcmPlayer.h */,
 				DEDC7F841E99F59400DD2FC4 /* PcmPlayer.m */,
+				DECBF4E81E9E6470002A229B /* Tools.h */,
+				DECBF4E91E9E6470002A229B /* Tools.m */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -226,6 +245,7 @@
 		DEEFFA661E8D55F8001F5D3D /* PPJQR */ = {
 			isa = PBXGroup;
 			children = (
+				DEDC7F821E99F57700DD2FC4 /* Tools */,
 				DE2238261E9131D9004194F8 /* 主界面 */,
 				DEEFFA7F1E8D57C6001F5D3D /* BaseViewController */,
 				DEEFFA7E1E8D5798001F5D3D /* 登录 */,
@@ -402,7 +422,9 @@
 			files = (
 				DEEFFA6F1E8D55F8001F5D3D /* LoginViewController.m in Sources */,
 				DEEFFA821E8D57EB001F5D3D /* BaseViewController.m in Sources */,
+				DECBF4ED1E9E6ABC002A229B /* PlayModel.m in Sources */,
 				DEEFFA6C1E8D55F8001F5D3D /* AppDelegate.m in Sources */,
+				DECBF4EA1E9E6470002A229B /* Tools.m in Sources */,
 				DEDC7F881E99F71B00DD2FC4 /* TTSConfig.m in Sources */,
 				DEEFFA691E8D55F8001F5D3D /* main.m in Sources */,
 				DEEFFA851E8D5805001F5D3D /* BaseNaviViewController.m in Sources */,
@@ -410,6 +432,8 @@
 				DE22383A1E9136CE004194F8 /* HomeLeftCell.m in Sources */,
 				DEF6C20F1E97C3A90063D21B /* IATConfig.m in Sources */,
 				DE22382D1E913397004194F8 /* HomeLeftView.m in Sources */,
+				DECBF4F01E9E6BB1002A229B /* WeatherModel.m in Sources */,
+				DECBF4E71E9E6191002A229B /* MoreResultsModel.m in Sources */,
 				DE2238291E9131F8004194F8 /* HomeViewController.m in Sources */,
 				DE2238331E9135AC004194F8 /* HomeHeatView.m in Sources */,
 				DECBF4E41E9E5ADD002A229B /* Toast+UIView.m in Sources */,
@@ -540,6 +564,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"\"$(SRCROOT)/iflyMSC.framework\"",
+					"\"${PODS_ROOT}/Headers/Public/FreeStreamer\"",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
 				);
 				INFOPLIST_FILE = PPJQR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -560,6 +586,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"\"$(SRCROOT)/iflyMSC.framework\"",
+					"\"${PODS_ROOT}/Headers/Public/FreeStreamer\"",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
 				);
 				INFOPLIST_FILE = PPJQR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

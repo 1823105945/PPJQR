@@ -14,6 +14,9 @@
 #define ViewScreen [[UIScreen mainScreen] bounds]
 #define ViewSize self.view.frame.size
 #define SETIMAGENAME(Name) [UIImage imageNamed:Name]
-
+#define OPENQA @"openQA"
+#define PLAYST @"music"
+#define WEATHER @"weather"
+#define BAIKE @"baike"
 #define APPID_VALUE           @"58e7883f"
 #endif /* PPJQR_h */
