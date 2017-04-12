@@ -27,6 +27,8 @@
 		DEA1D6B71E953353008F36D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6B61E953353008F36D5 /* Foundation.framework */; };
 		DEA1D6B91E953362008F36D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6B81E953362008F36D5 /* CoreGraphics.framework */; };
 		DEA1D6BD1E95350A008F36D5 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6BC1E95350A008F36D5 /* Contacts.framework */; };
+		DECBF4E31E9E5ADD002A229B /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4E01E9E5ADD002A229B /* BaseView.m */; };
+		DECBF4E41E9E5ADD002A229B /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4E21E9E5ADD002A229B /* Toast+UIView.m */; };
 		DEDC7F851E99F59400DD2FC4 /* PcmPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC7F841E99F59400DD2FC4 /* PcmPlayer.m */; };
 		DEDC7F881E99F71B00DD2FC4 /* TTSConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC7F871E99F71A00DD2FC4 /* TTSConfig.m */; };
 		DEEFFA691E8D55F8001F5D3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEFFA681E8D55F8001F5D3D /* main.m */; };
@@ -69,6 +71,10 @@
 		DEA1D6B61E953353008F36D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEA1D6B81E953362008F36D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DEA1D6BC1E95350A008F36D5 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		DECBF4DF1E9E5ADD002A229B /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
+		DECBF4E01E9E5ADD002A229B /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
+		DECBF4E11E9E5ADD002A229B /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
+		DECBF4E21E9E5ADD002A229B /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
 		DEDC7F831E99F59400DD2FC4 /* PcmPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PcmPlayer.h; sourceTree = "<group>"; };
 		DEDC7F841E99F59400DD2FC4 /* PcmPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PcmPlayer.m; sourceTree = "<group>"; };
 		DEDC7F861E99F71A00DD2FC4 /* TTSConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSConfig.h; sourceTree = "<group>"; };
@@ -185,6 +191,10 @@
 		DEDC7F821E99F57700DD2FC4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				DECBF4DF1E9E5ADD002A229B /* BaseView.h */,
+				DECBF4E01E9E5ADD002A229B /* BaseView.m */,
+				DECBF4E11E9E5ADD002A229B /* Toast+UIView.h */,
+				DECBF4E21E9E5ADD002A229B /* Toast+UIView.m */,
 				DEDC7F861E99F71A00DD2FC4 /* TTSConfig.h */,
 				DEDC7F871E99F71A00DD2FC4 /* TTSConfig.m */,
 				DEF6C20D1E97C3A90063D21B /* IATConfig.h */,
@@ -396,11 +406,13 @@
 				DEDC7F881E99F71B00DD2FC4 /* TTSConfig.m in Sources */,
 				DEEFFA691E8D55F8001F5D3D /* main.m in Sources */,
 				DEEFFA851E8D5805001F5D3D /* BaseNaviViewController.m in Sources */,
+				DECBF4E31E9E5ADD002A229B /* BaseView.m in Sources */,
 				DE22383A1E9136CE004194F8 /* HomeLeftCell.m in Sources */,
 				DEF6C20F1E97C3A90063D21B /* IATConfig.m in Sources */,
 				DE22382D1E913397004194F8 /* HomeLeftView.m in Sources */,
 				DE2238291E9131F8004194F8 /* HomeViewController.m in Sources */,
 				DE2238331E9135AC004194F8 /* HomeHeatView.m in Sources */,
+				DECBF4E41E9E5ADD002A229B /* Toast+UIView.m in Sources */,
 				DEDC7F851E99F59400DD2FC4 /* PcmPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -131,7 +131,7 @@
         [result appendFormat:@"%@",key];
     }
     NSLog(@"听写结果：%@",result);
-    [self hecheng];
+//    [self hecheng];
 }
 
 //语音合成
