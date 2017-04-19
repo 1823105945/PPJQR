@@ -27,6 +27,7 @@
 		DEA1D6B71E953353008F36D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6B61E953353008F36D5 /* Foundation.framework */; };
 		DEA1D6B91E953362008F36D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6B81E953362008F36D5 /* CoreGraphics.framework */; };
 		DEA1D6BD1E95350A008F36D5 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6BC1E95350A008F36D5 /* Contacts.framework */; };
+		DEC7338B1EA78B0600F24795 /* CALayer+XibConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC7338A1EA78B0600F24795 /* CALayer+XibConfiguration.m */; };
 		DECBF4E31E9E5ADD002A229B /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4E01E9E5ADD002A229B /* BaseView.m */; };
 		DECBF4E41E9E5ADD002A229B /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4E21E9E5ADD002A229B /* Toast+UIView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DECBF4E71E9E6191002A229B /* MoreResultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4E61E9E6191002A229B /* MoreResultsModel.m */; };
@@ -75,6 +76,8 @@
 		DEA1D6B61E953353008F36D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEA1D6B81E953362008F36D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DEA1D6BC1E95350A008F36D5 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		DEC733891EA78B0600F24795 /* CALayer+XibConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+XibConfiguration.h"; sourceTree = "<group>"; };
+		DEC7338A1EA78B0600F24795 /* CALayer+XibConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+XibConfiguration.m"; sourceTree = "<group>"; };
 		DECBF4DF1E9E5ADD002A229B /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
 		DECBF4E01E9E5ADD002A229B /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
 		DECBF4E11E9E5ADD002A229B /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
@@ -208,6 +211,8 @@
 		DEDC7F821E99F57700DD2FC4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				DEC733891EA78B0600F24795 /* CALayer+XibConfiguration.h */,
+				DEC7338A1EA78B0600F24795 /* CALayer+XibConfiguration.m */,
 				DECBF4DF1E9E5ADD002A229B /* BaseView.h */,
 				DECBF4E01E9E5ADD002A229B /* BaseView.m */,
 				DECBF4E11E9E5ADD002A229B /* Toast+UIView.h */,
@@ -426,6 +431,7 @@
 				DEEFFA6C1E8D55F8001F5D3D /* AppDelegate.m in Sources */,
 				DECBF4EA1E9E6470002A229B /* Tools.m in Sources */,
 				DEDC7F881E99F71B00DD2FC4 /* TTSConfig.m in Sources */,
+				DEC7338B1EA78B0600F24795 /* CALayer+XibConfiguration.m in Sources */,
 				DEEFFA691E8D55F8001F5D3D /* main.m in Sources */,
 				DEEFFA851E8D5805001F5D3D /* BaseNaviViewController.m in Sources */,
 				DECBF4E31E9E5ADD002A229B /* BaseView.m in Sources */,

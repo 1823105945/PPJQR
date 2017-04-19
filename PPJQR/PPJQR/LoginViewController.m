@@ -7,8 +7,11 @@
 //
 
 #import "LoginViewController.h"
+#import "BaseView.h"
 
 @interface LoginViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *userNameField;
+@property (weak, nonatomic) IBOutlet UITextField *pswField;
 
 @end
 
@@ -20,8 +23,14 @@
 }
 
 - (IBAction)loginClock:(id)sender {
+    if (self.userNameField.text.length==0) {
+        [BaseView _init:@"请输入账号"];
+    }else if(self.pswField.text.length==0){
+        [BaseView _init:@"请输入密码"];
+    }else{
+        [self performSegueWithIdentifier:@"Home" sender:nil];
+    }
     
-    [self performSegueWithIdentifier:@"Home" sender:nil];
 }
 
 - (void)didReceiveMemoryWarning {
