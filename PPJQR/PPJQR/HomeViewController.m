@@ -75,7 +75,8 @@
    }
 //英文会话
 - (IBAction)enconversation:(id)sender {
-
+    [IATConfig sharedInstance].language = [IFlySpeechConstant LANGUAGE_ENGLISH];
+     [_iFlySpeechUnderstander setParameter:[IATConfig sharedInstance].language forKey:[IFlySpeechConstant LANGUAGE]];
 }
 //中译英
 - (IBAction)cnEntranslation:(id)sender {
@@ -88,10 +89,12 @@
 - (IBAction)homeClock:(id)sender {
     UISegmentedControl *segmentedControl=(UISegmentedControl *)sender;
     if (segmentedControl.selectedSegmentIndex==0) {
-        self.selectView.frame=CGRectMake(0, 0, ViewSize.width/2, 1);
+        self.selectView.frame=CGRectMake(0, 163, ViewSize.width/2, 1);
+        
     }else{
-        self.selectView.frame=CGRectMake(ViewSize.width/2, 0, ViewSize.width/2, 1);
+        self.selectView.frame=CGRectMake(ViewSize.width/2, 163, ViewSize.width/2, 1);
     }
+    [homeScrollView setContentOffset:CGPointMake(ViewSize.width*segmentedControl.selectedSegmentIndex, 0) animated:YES];//.contentOffset=CGPointMake(ViewSize.width*segmentedControl.selectedSegmentIndex, 0);
 }
 
 
@@ -150,6 +153,8 @@
         if ([responseObject isKindOfClass:[MoreResultsModel class]]) {
             SelfWeek.moreResultsModel=responseObject;
             [SelfWeek speechSynthesis:SelfWeek.moreResultsModel.answer.text];
+            [SelfWeek dataSouse:@"weixin" Value:SelfWeek.moreResultsModel.text];
+            [SelfWeek dataSouse:@"rhl" Value:SelfWeek.moreResultsModel.answer.text];
         }else if ([responseObject isKindOfClass:[PlayModel class]]){
             SelfWeek.playModel=responseObject;
             if (SelfWeek.playModel.data.result>0) {
@@ -159,6 +164,7 @@
             
         }else if ([responseObject isKindOfClass:[WeatherModel class]]){
             SelfWeek.weatherModel=responseObject;
+//            SelfWeek
         }else{
             
         }
@@ -204,7 +210,7 @@
     _iFlySpeechSynthesizer.delegate = self;
     
     
-    [_iFlySpeechSynthesizer startSpeaking:@"爸爸妈妈说实诚不叫傻"];
+    [_iFlySpeechSynthesizer startSpeaking:synthesis];
     if (_iFlySpeechSynthesizer.isSpeaking) {
         _state = Playing;
     }
@@ -229,15 +235,7 @@
     
     if (_iFlySpeechUnderstander != nil) {
         IATConfig *instance = [IATConfig sharedInstance];
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
         //参数意义与IATViewController保持一致，详情可以参照其解释
         [_iFlySpeechUnderstander setParameter:instance.speechTimeout forKey:[IFlySpeechConstant SPEECH_TIMEOUT]];
         [_iFlySpeechUnderstander setParameter:instance.vadEos forKey:[IFlySpeechConstant VAD_EOS]];
@@ -402,18 +400,29 @@
     [self initSynthesizer];
 }
 
+-(void)dataSouse:(NSString *)key Value:(NSString *)value{
+    NSDictionary *dict;
+    if ([key isEqualToString:@"weixin"]) {
+        dict= [NSDictionary dictionaryWithObjectsAndKeys:@"weixin",@"name",value,@"content", nil];
+    }else{
+        dict= [NSDictionary dictionaryWithObjectsAndKeys:@"rhl",@"name",value,@"content", nil];
+    }
+    
+    [_resultArray addObject:dict];
+    [homeTableView reloadData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"weixin",@"name",@"微信团队欢迎你。很高兴你开启了微信生活，期待能为你和朋友们带来愉快的沟通体检。",@"content", nil];
-    NSDictionary *dict1 = [NSDictionary dictionaryWithObjectsAndKeys:@"rhl",@"name",@"hello",@"content", nil];
-    NSDictionary *dict2 = [NSDictionary dictionaryWithObjectsAndKeys:@"rhl",@"name",@"0",@"content", nil];
-    NSDictionary *dict3 = [NSDictionary dictionaryWithObjectsAndKeys:@"weixin",@"name",@"谢谢反馈，已收录。",@"content", nil];
-    NSDictionary *dict4 = [NSDictionary dictionaryWithObjectsAndKeys:@"rhl",@"name",@"0",@"content", nil];
-    NSDictionary *dict5 = [NSDictionary dictionaryWithObjectsAndKeys:@"weixin",@"name",@"谢谢反馈，已收录。",@"content", nil];
-    NSDictionary *dict6 = [NSDictionary dictionaryWithObjectsAndKeys:@"rhl",@"name",@"大数据测试，长数据测试，大数据测试，长数据测试，大数据测试，长数据测试，大数据测试，长数据测试，大数据测试，长数据测试，大数据测试，长数据测试。",@"content", nil];
-    
-    _resultArray = [NSMutableArray arrayWithObjects:dict,dict1,dict2,dict3,dict4,dict5,dict6, nil];
+    [self homeNaviUI];
+    _resultArray=[[NSMutableArray alloc]init];
+    homeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self initUI];
+}
+
+-(void)mulist{
+    
 }
 
 -(void)initUI{

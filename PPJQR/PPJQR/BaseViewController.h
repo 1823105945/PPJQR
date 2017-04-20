@@ -10,5 +10,5 @@
 
 
 @interface BaseViewController : UIViewController
-
+-(void)homeNaviUI;
 @end

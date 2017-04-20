@@ -11,10 +11,6 @@
 		DE2238291E9131F8004194F8 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2238281E9131F8004194F8 /* HomeViewController.m */; };
 		DE22382D1E913397004194F8 /* HomeLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE22382C1E913397004194F8 /* HomeLeftView.m */; };
 		DE22382F1E9133AB004194F8 /* HomeLeftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE22382E1E9133AB004194F8 /* HomeLeftView.xib */; };
-		DE2238331E9135AC004194F8 /* HomeHeatView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2238321E9135AC004194F8 /* HomeHeatView.m */; };
-		DE2238351E9135B7004194F8 /* HomeHeatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2238341E9135B7004194F8 /* HomeHeatView.xib */; };
-		DE22383A1E9136CE004194F8 /* HomeLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2238381E9136CE004194F8 /* HomeLeftCell.m */; };
-		DE22383B1E9136CE004194F8 /* HomeLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE2238391E9136CE004194F8 /* HomeLeftCell.xib */; };
 		DEA1D6A31E953248008F36D5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6A21E953248008F36D5 /* libz.tbd */; };
 		DEA1D6A71E953273008F36D5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6A61E953273008F36D5 /* CoreLocation.framework */; };
 		DEA1D6A91E95327F008F36D5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6A81E95327F008F36D5 /* CoreTelephony.framework */; };
@@ -27,7 +23,9 @@
 		DEA1D6B71E953353008F36D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6B61E953353008F36D5 /* Foundation.framework */; };
 		DEA1D6B91E953362008F36D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6B81E953362008F36D5 /* CoreGraphics.framework */; };
 		DEA1D6BD1E95350A008F36D5 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6BC1E95350A008F36D5 /* Contacts.framework */; };
+		DEA35B931EA82DE0002C0F9E /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA35B921EA82DE0002C0F9E /* ForgetPasswordViewController.m */; };
 		DEC7338B1EA78B0600F24795 /* CALayer+XibConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC7338A1EA78B0600F24795 /* CALayer+XibConfiguration.m */; };
+		DEC7338E1EA78FC900F24795 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC7338D1EA78FC900F24795 /* RegisterViewController.m */; };
 		DECBF4E31E9E5ADD002A229B /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4E01E9E5ADD002A229B /* BaseView.m */; };
 		DECBF4E41E9E5ADD002A229B /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4E21E9E5ADD002A229B /* Toast+UIView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DECBF4E71E9E6191002A229B /* MoreResultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4E61E9E6191002A229B /* MoreResultsModel.m */; };
@@ -57,12 +55,6 @@
 		DE22382B1E913397004194F8 /* HomeLeftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeLeftView.h; sourceTree = "<group>"; };
 		DE22382C1E913397004194F8 /* HomeLeftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeLeftView.m; sourceTree = "<group>"; };
 		DE22382E1E9133AB004194F8 /* HomeLeftView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeLeftView.xib; sourceTree = "<group>"; };
-		DE2238311E9135AC004194F8 /* HomeHeatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeatView.h; sourceTree = "<group>"; };
-		DE2238321E9135AC004194F8 /* HomeHeatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeatView.m; sourceTree = "<group>"; };
-		DE2238341E9135B7004194F8 /* HomeHeatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeatView.xib; sourceTree = "<group>"; };
-		DE2238371E9136CE004194F8 /* HomeLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeLeftCell.h; sourceTree = "<group>"; };
-		DE2238381E9136CE004194F8 /* HomeLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeLeftCell.m; sourceTree = "<group>"; };
-		DE2238391E9136CE004194F8 /* HomeLeftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeLeftCell.xib; sourceTree = "<group>"; };
 		DE22383C1E913874004194F8 /* PPJQR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPJQR.h; sourceTree = "<group>"; };
 		DEA1D6A21E953248008F36D5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		DEA1D6A61E953273008F36D5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -76,8 +68,12 @@
 		DEA1D6B61E953353008F36D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEA1D6B81E953362008F36D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DEA1D6BC1E95350A008F36D5 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		DEA35B911EA82DE0002C0F9E /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
+		DEA35B921EA82DE0002C0F9E /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
 		DEC733891EA78B0600F24795 /* CALayer+XibConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+XibConfiguration.h"; sourceTree = "<group>"; };
 		DEC7338A1EA78B0600F24795 /* CALayer+XibConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+XibConfiguration.m"; sourceTree = "<group>"; };
+		DEC7338C1EA78FC900F24795 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		DEC7338D1EA78FC900F24795 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		DECBF4DF1E9E5ADD002A229B /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
 		DECBF4E01E9E5ADD002A229B /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
 		DECBF4E11E9E5ADD002A229B /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
@@ -185,12 +181,6 @@
 				DE22382B1E913397004194F8 /* HomeLeftView.h */,
 				DE22382C1E913397004194F8 /* HomeLeftView.m */,
 				DE22382E1E9133AB004194F8 /* HomeLeftView.xib */,
-				DE2238311E9135AC004194F8 /* HomeHeatView.h */,
-				DE2238321E9135AC004194F8 /* HomeHeatView.m */,
-				DE2238341E9135B7004194F8 /* HomeHeatView.xib */,
-				DE2238371E9136CE004194F8 /* HomeLeftCell.h */,
-				DE2238381E9136CE004194F8 /* HomeLeftCell.m */,
-				DE2238391E9136CE004194F8 /* HomeLeftCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -279,6 +269,10 @@
 			children = (
 				DEEFFA6D1E8D55F8001F5D3D /* LoginViewController.h */,
 				DEEFFA6E1E8D55F8001F5D3D /* LoginViewController.m */,
+				DEC7338C1EA78FC900F24795 /* RegisterViewController.h */,
+				DEC7338D1EA78FC900F24795 /* RegisterViewController.m */,
+				DEA35B911EA82DE0002C0F9E /* ForgetPasswordViewController.h */,
+				DEA35B921EA82DE0002C0F9E /* ForgetPasswordViewController.m */,
 			);
 			name = "登录";
 			sourceTree = "<group>";
@@ -364,9 +358,7 @@
 				DE22382F1E9133AB004194F8 /* HomeLeftView.xib in Resources */,
 				DEEFFA771E8D55F8001F5D3D /* LaunchScreen.storyboard in Resources */,
 				DEEFFA741E8D55F8001F5D3D /* Assets.xcassets in Resources */,
-				DE22383B1E9136CE004194F8 /* HomeLeftCell.xib in Resources */,
 				DEEFFA721E8D55F8001F5D3D /* Main.storyboard in Resources */,
-				DE2238351E9135B7004194F8 /* HomeHeatView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,13 +427,13 @@
 				DEEFFA691E8D55F8001F5D3D /* main.m in Sources */,
 				DEEFFA851E8D5805001F5D3D /* BaseNaviViewController.m in Sources */,
 				DECBF4E31E9E5ADD002A229B /* BaseView.m in Sources */,
-				DE22383A1E9136CE004194F8 /* HomeLeftCell.m in Sources */,
 				DEF6C20F1E97C3A90063D21B /* IATConfig.m in Sources */,
 				DE22382D1E913397004194F8 /* HomeLeftView.m in Sources */,
+				DEA35B931EA82DE0002C0F9E /* ForgetPasswordViewController.m in Sources */,
 				DECBF4F01E9E6BB1002A229B /* WeatherModel.m in Sources */,
 				DECBF4E71E9E6191002A229B /* MoreResultsModel.m in Sources */,
+				DEC7338E1EA78FC900F24795 /* RegisterViewController.m in Sources */,
 				DE2238291E9131F8004194F8 /* HomeViewController.m in Sources */,
-				DE2238331E9135AC004194F8 /* HomeHeatView.m in Sources */,
 				DECBF4E41E9E5ADD002A229B /* Toast+UIView.m in Sources */,
 				DEDC7F851E99F59400DD2FC4 /* PcmPlayer.m in Sources */,
 			);

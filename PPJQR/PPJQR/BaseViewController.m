@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "PPJQR.h"
 
 @interface BaseViewController ()
 
@@ -16,9 +17,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    UIBarButtonItem *item=[[UIBarButtonItem alloc]initWithImage:SETIMAGENAME(@"登录1_03_03") style:UIBarButtonItemStylePlain target:self action:@selector(blackController)];
+    self.navigationItem.leftBarButtonItem=item;
 }
 
+-(void)blackController{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+-(void)homeNaviUI{
+    UIBarButtonItem *item=[[UIBarButtonItem alloc]initWithImage:SETIMAGENAME(@"首页-查看2_02") style:UIBarButtonItemStylePlain target:self action:@selector(mulist)];
+    self.navigationItem.leftBarButtonItem=item;
+}
+-(void)mulist{
+
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

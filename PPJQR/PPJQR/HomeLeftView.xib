@@ -15,13 +15,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ap5-Ky-Jmv">
-                    <rect key="frame" x="0.0" y="0.0" width="160" height="480"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ap5-Ky-Jmv">
+                    <rect key="frame" x="0.0" y="0.0" width="160" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="Uqd-Rw-ESJ"/>
+                    </constraints>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.30427194148936171" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ap5-Ky-Jmv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bGI-UG-Es8"/>
+                <constraint firstItem="Ap5-Ky-Jmv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hqN-ui-wdj"/>
+                <constraint firstAttribute="bottom" secondItem="Ap5-Ky-Jmv" secondAttribute="bottom" id="i2a-Sd-Sfl"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="leftTableView" destination="Ap5-Ky-Jmv" id="K1J-r3-CBg"/>

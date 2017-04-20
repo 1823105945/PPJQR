@@ -41,5 +41,8 @@ static NSString *CELLID=@"CELLID";
     
 }
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+//    self
+}
 
 @end
