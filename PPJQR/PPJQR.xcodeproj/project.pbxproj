@@ -24,6 +24,14 @@
 		DEA1D6B91E953362008F36D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6B81E953362008F36D5 /* CoreGraphics.framework */; };
 		DEA1D6BD1E95350A008F36D5 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA1D6BC1E95350A008F36D5 /* Contacts.framework */; };
 		DEA35B931EA82DE0002C0F9E /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA35B921EA82DE0002C0F9E /* ForgetPasswordViewController.m */; };
+		DEA3AC411EA8DE4D008A1A06 /* MenuTVViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3AC3F1EA8DE4D008A1A06 /* MenuTVViewCell.m */; };
+		DEA3AC421EA8DE4D008A1A06 /* MenuTVViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA3AC401EA8DE4D008A1A06 /* MenuTVViewCell.xib */; };
+		DEA3AC4A1EA8E997008A1A06 /* HeatView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3AC491EA8E997008A1A06 /* HeatView.m */; };
+		DEA3AC4C1EA8E9AE008A1A06 /* HeatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA3AC4B1EA8E9AE008A1A06 /* HeatView.xib */; };
+		DEA3AC4F1EA8EB4A008A1A06 /* FootView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3AC4E1EA8EB4A008A1A06 /* FootView.m */; };
+		DEA3AC511EA8EB59008A1A06 /* FootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA3AC501EA8EB59008A1A06 /* FootView.xib */; };
+		DEA3AC551EA8F77B008A1A06 /* ExplainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3AC541EA8F77B008A1A06 /* ExplainViewController.m */; };
+		DEA3AC581EA8F8A0008A1A06 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3AC571EA8F8A0008A1A06 /* FeedbackViewController.m */; };
 		DEC7338B1EA78B0600F24795 /* CALayer+XibConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC7338A1EA78B0600F24795 /* CALayer+XibConfiguration.m */; };
 		DEC7338E1EA78FC900F24795 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC7338D1EA78FC900F24795 /* RegisterViewController.m */; };
 		DECBF4E31E9E5ADD002A229B /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4E01E9E5ADD002A229B /* BaseView.m */; };
@@ -32,6 +40,11 @@
 		DECBF4EA1E9E6470002A229B /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4E91E9E6470002A229B /* Tools.m */; };
 		DECBF4ED1E9E6ABC002A229B /* PlayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4EC1E9E6ABC002A229B /* PlayModel.m */; };
 		DECBF4F01E9E6BB1002A229B /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4EF1E9E6BB1002A229B /* WeatherModel.m */; };
+		DED145BB1EAA3BF800887571 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED145BA1EAA3BF800887571 /* CoreBluetooth.framework */; };
+		DED83EA11EAC98C500E3468D /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DED83EA01EAC98C500E3468D /* PlaceholderTextView.m */; };
+		DED83EA41EAC9C0A00E3468D /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = DED83EA31EAC9C0A00E3468D /* KLCPopup.m */; };
+		DED83EA71EACA03400E3468D /* FeedBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = DED83EA61EACA03400E3468D /* FeedBackView.m */; };
+		DED83EA91EACA03E00E3468D /* FeedBackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED83EA81EACA03E00E3468D /* FeedBackView.xib */; };
 		DEDC7F851E99F59400DD2FC4 /* PcmPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC7F841E99F59400DD2FC4 /* PcmPlayer.m */; };
 		DEDC7F881E99F71B00DD2FC4 /* TTSConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC7F871E99F71A00DD2FC4 /* TTSConfig.m */; };
 		DEEFFA691E8D55F8001F5D3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEFFA681E8D55F8001F5D3D /* main.m */; };
@@ -70,6 +83,19 @@
 		DEA1D6BC1E95350A008F36D5 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		DEA35B911EA82DE0002C0F9E /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
 		DEA35B921EA82DE0002C0F9E /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
+		DEA3AC3E1EA8DE4D008A1A06 /* MenuTVViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTVViewCell.h; sourceTree = "<group>"; };
+		DEA3AC3F1EA8DE4D008A1A06 /* MenuTVViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTVViewCell.m; sourceTree = "<group>"; };
+		DEA3AC401EA8DE4D008A1A06 /* MenuTVViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTVViewCell.xib; sourceTree = "<group>"; };
+		DEA3AC481EA8E997008A1A06 /* HeatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeatView.h; sourceTree = "<group>"; };
+		DEA3AC491EA8E997008A1A06 /* HeatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeatView.m; sourceTree = "<group>"; };
+		DEA3AC4B1EA8E9AE008A1A06 /* HeatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeatView.xib; sourceTree = "<group>"; };
+		DEA3AC4D1EA8EB4A008A1A06 /* FootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootView.h; sourceTree = "<group>"; };
+		DEA3AC4E1EA8EB4A008A1A06 /* FootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootView.m; sourceTree = "<group>"; };
+		DEA3AC501EA8EB59008A1A06 /* FootView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FootView.xib; sourceTree = "<group>"; };
+		DEA3AC531EA8F77B008A1A06 /* ExplainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExplainViewController.h; sourceTree = "<group>"; };
+		DEA3AC541EA8F77B008A1A06 /* ExplainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplainViewController.m; sourceTree = "<group>"; };
+		DEA3AC561EA8F8A0008A1A06 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		DEA3AC571EA8F8A0008A1A06 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
 		DEC733891EA78B0600F24795 /* CALayer+XibConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+XibConfiguration.h"; sourceTree = "<group>"; };
 		DEC7338A1EA78B0600F24795 /* CALayer+XibConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+XibConfiguration.m"; sourceTree = "<group>"; };
 		DEC7338C1EA78FC900F24795 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -86,6 +112,14 @@
 		DECBF4EC1E9E6ABC002A229B /* PlayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayModel.m; sourceTree = "<group>"; };
 		DECBF4EE1E9E6BB1002A229B /* WeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
 		DECBF4EF1E9E6BB1002A229B /* WeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
+		DED145BA1EAA3BF800887571 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		DED83E9F1EAC98C500E3468D /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
+		DED83EA01EAC98C500E3468D /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
+		DED83EA21EAC9C0A00E3468D /* KLCPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCPopup.h; sourceTree = "<group>"; };
+		DED83EA31EAC9C0A00E3468D /* KLCPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCPopup.m; sourceTree = "<group>"; };
+		DED83EA51EACA03400E3468D /* FeedBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackView.h; sourceTree = "<group>"; };
+		DED83EA61EACA03400E3468D /* FeedBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackView.m; sourceTree = "<group>"; };
+		DED83EA81EACA03E00E3468D /* FeedBackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedBackView.xib; sourceTree = "<group>"; };
 		DEDC7F831E99F59400DD2FC4 /* PcmPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PcmPlayer.h; sourceTree = "<group>"; };
 		DEDC7F841E99F59400DD2FC4 /* PcmPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PcmPlayer.m; sourceTree = "<group>"; };
 		DEDC7F861E99F71A00DD2FC4 /* TTSConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSConfig.h; sourceTree = "<group>"; };
@@ -114,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DED145BB1EAA3BF800887571 /* CoreBluetooth.framework in Frameworks */,
 				DEA1D6BD1E95350A008F36D5 /* Contacts.framework in Frameworks */,
 				DEA1D6B91E953362008F36D5 /* CoreGraphics.framework in Frameworks */,
 				DEA1D6B71E953353008F36D5 /* Foundation.framework in Frameworks */,
@@ -146,6 +181,7 @@
 		73A843E79E59A2720AD4B3AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DED145BA1EAA3BF800887571 /* CoreBluetooth.framework */,
 				DEF6C2101E97C7B20063D21B /* iflyMSC.framework */,
 				DEA1D6BC1E95350A008F36D5 /* Contacts.framework */,
 				DEA1D6B81E953362008F36D5 /* CoreGraphics.framework */,
@@ -181,6 +217,15 @@
 				DE22382B1E913397004194F8 /* HomeLeftView.h */,
 				DE22382C1E913397004194F8 /* HomeLeftView.m */,
 				DE22382E1E9133AB004194F8 /* HomeLeftView.xib */,
+				DEA3AC3E1EA8DE4D008A1A06 /* MenuTVViewCell.h */,
+				DEA3AC3F1EA8DE4D008A1A06 /* MenuTVViewCell.m */,
+				DEA3AC401EA8DE4D008A1A06 /* MenuTVViewCell.xib */,
+				DEA3AC481EA8E997008A1A06 /* HeatView.h */,
+				DEA3AC491EA8E997008A1A06 /* HeatView.m */,
+				DEA3AC4B1EA8E9AE008A1A06 /* HeatView.xib */,
+				DEA3AC4D1EA8EB4A008A1A06 /* FootView.h */,
+				DEA3AC4E1EA8EB4A008A1A06 /* FootView.m */,
+				DEA3AC501EA8EB59008A1A06 /* FootView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -198,9 +243,35 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		DEA3AC521EA8F73E008A1A06 /* 侧边栏 */ = {
+			isa = PBXGroup;
+			children = (
+				DED83E9E1EAC98B800E3468D /* View */,
+				DEA3AC531EA8F77B008A1A06 /* ExplainViewController.h */,
+				DEA3AC541EA8F77B008A1A06 /* ExplainViewController.m */,
+				DEA3AC561EA8F8A0008A1A06 /* FeedbackViewController.h */,
+				DEA3AC571EA8F8A0008A1A06 /* FeedbackViewController.m */,
+			);
+			name = "侧边栏";
+			sourceTree = "<group>";
+		};
+		DED83E9E1EAC98B800E3468D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DED83E9F1EAC98C500E3468D /* PlaceholderTextView.h */,
+				DED83EA01EAC98C500E3468D /* PlaceholderTextView.m */,
+				DED83EA51EACA03400E3468D /* FeedBackView.h */,
+				DED83EA61EACA03400E3468D /* FeedBackView.m */,
+				DED83EA81EACA03E00E3468D /* FeedBackView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		DEDC7F821E99F57700DD2FC4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				DED83EA21EAC9C0A00E3468D /* KLCPopup.h */,
+				DED83EA31EAC9C0A00E3468D /* KLCPopup.m */,
 				DEC733891EA78B0600F24795 /* CALayer+XibConfiguration.h */,
 				DEC7338A1EA78B0600F24795 /* CALayer+XibConfiguration.m */,
 				DECBF4DF1E9E5ADD002A229B /* BaseView.h */,
@@ -240,6 +311,7 @@
 		DEEFFA661E8D55F8001F5D3D /* PPJQR */ = {
 			isa = PBXGroup;
 			children = (
+				DEA3AC521EA8F73E008A1A06 /* 侧边栏 */,
 				DEDC7F821E99F57700DD2FC4 /* Tools */,
 				DE2238261E9131D9004194F8 /* 主界面 */,
 				DEEFFA7F1E8D57C6001F5D3D /* BaseViewController */,
@@ -322,7 +394,7 @@
 				TargetAttributes = {
 					DEEFFA631E8D55F8001F5D3D = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = S69V8T638E;
+						DevelopmentTeam = 8V5T4ELF29;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -355,9 +427,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA3AC4C1EA8E9AE008A1A06 /* HeatView.xib in Resources */,
+				DED83EA91EACA03E00E3468D /* FeedBackView.xib in Resources */,
 				DE22382F1E9133AB004194F8 /* HomeLeftView.xib in Resources */,
 				DEEFFA771E8D55F8001F5D3D /* LaunchScreen.storyboard in Resources */,
+				DEA3AC511EA8EB59008A1A06 /* FootView.xib in Resources */,
 				DEEFFA741E8D55F8001F5D3D /* Assets.xcassets in Resources */,
+				DEA3AC421EA8DE4D008A1A06 /* MenuTVViewCell.xib in Resources */,
 				DEEFFA721E8D55F8001F5D3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,10 +495,17 @@
 			files = (
 				DEEFFA6F1E8D55F8001F5D3D /* LoginViewController.m in Sources */,
 				DEEFFA821E8D57EB001F5D3D /* BaseViewController.m in Sources */,
+				DED83EA71EACA03400E3468D /* FeedBackView.m in Sources */,
+				DED83EA11EAC98C500E3468D /* PlaceholderTextView.m in Sources */,
 				DECBF4ED1E9E6ABC002A229B /* PlayModel.m in Sources */,
 				DEEFFA6C1E8D55F8001F5D3D /* AppDelegate.m in Sources */,
 				DECBF4EA1E9E6470002A229B /* Tools.m in Sources */,
+				DEA3AC4A1EA8E997008A1A06 /* HeatView.m in Sources */,
+				DEA3AC4F1EA8EB4A008A1A06 /* FootView.m in Sources */,
+				DEA3AC551EA8F77B008A1A06 /* ExplainViewController.m in Sources */,
+				DEA3AC411EA8DE4D008A1A06 /* MenuTVViewCell.m in Sources */,
 				DEDC7F881E99F71B00DD2FC4 /* TTSConfig.m in Sources */,
+				DED83EA41EAC9C0A00E3468D /* KLCPopup.m in Sources */,
 				DEC7338B1EA78B0600F24795 /* CALayer+XibConfiguration.m in Sources */,
 				DEEFFA691E8D55F8001F5D3D /* main.m in Sources */,
 				DEEFFA851E8D5805001F5D3D /* BaseNaviViewController.m in Sources */,
@@ -436,6 +519,7 @@
 				DE2238291E9131F8004194F8 /* HomeViewController.m in Sources */,
 				DECBF4E41E9E5ADD002A229B /* Toast+UIView.m in Sources */,
 				DEDC7F851E99F59400DD2FC4 /* PcmPlayer.m in Sources */,
+				DEA3AC581EA8F8A0008A1A06 /* FeedbackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +640,7 @@
 			baseConfigurationReference = 89837CB44028497EC395DC18 /* Pods-PPJQR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = S69V8T638E;
+				DEVELOPMENT_TEAM = 8V5T4ELF29;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -568,7 +652,7 @@
 				INFOPLIST_FILE = PPJQR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iflytek.MSCDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KYJL.driverSide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -578,7 +662,7 @@
 			baseConfigurationReference = 4D2115B64C0613FDC4C1A439 /* Pods-PPJQR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = S69V8T638E;
+				DEVELOPMENT_TEAM = 8V5T4ELF29;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -590,7 +674,7 @@
 				INFOPLIST_FILE = PPJQR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iflytek.MSCDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KYJL.driverSide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

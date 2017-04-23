@@ -13,13 +13,13 @@
         <!--Base Navi View Controller-->
         <scene sceneID="tz7-su-bkW">
             <objects>
-                <navigationController navigationBarHidden="YES" id="GAo-Zn-rb5" customClass="BaseNaviViewController" sceneMemberID="viewController">
+                <navigationController id="GAo-Zn-rb5" customClass="BaseNaviViewController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eMD-Ry-mMF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FcM-jD-rTU"/>
+                        <segue destination="c2P-gF-ZJy" kind="relationship" relationship="rootViewController" id="FNI-a1-OXK"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tIX-ry-6HV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -44,7 +44,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="登录_07" translatesAutoresizingMaskIntoConstraints="NO" id="M0i-No-skY">
                                         <rect key="frame" x="8" y="4" width="50" height="36"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Vp-nM-gA6">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Vp-nM-gA6">
                                         <rect key="frame" x="66" y="5" width="208" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="oup-MG-LMX"/>
@@ -77,7 +77,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="登录_11" translatesAutoresizingMaskIntoConstraints="NO" id="wQD-FA-ed4">
                                         <rect key="frame" x="8" y="4" width="50" height="36"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mru-Ii-ED4">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mru-Ii-ED4">
                                         <rect key="frame" x="66" y="4" width="208" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="za2-Cp-LVp"/>
@@ -110,7 +110,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="fLz-9v-IpQ"/>
                                 </constraints>
-                                <state key="normal" title="登录">
+                                <state key="normal" title="确定">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -131,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFZ-D2-xpJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583" y="820"/>
+            <point key="canvasLocation" x="722" y="1813"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -154,7 +154,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="登录_07" translatesAutoresizingMaskIntoConstraints="NO" id="WY3-ar-qJ2">
                                         <rect key="frame" x="8" y="4" width="50" height="36"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xpz-Hw-fvS">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xpz-Hw-fvS">
                                         <rect key="frame" x="66" y="5" width="208" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="gIu-aU-2ok"/>
@@ -187,7 +187,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="登录_11" translatesAutoresizingMaskIntoConstraints="NO" id="WQ2-3v-EuM">
                                         <rect key="frame" x="8" y="4" width="50" height="36"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W76-rq-Y5x">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W76-rq-Y5x">
                                         <rect key="frame" x="66" y="4" width="208" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="4cn-B5-8Bo"/>
@@ -240,9 +240,6 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderRadius" value="5"/>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="loginClock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RB4-7D-hjk"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8p-sf-QXR">
                                 <rect key="frame" x="111" y="374" width="62" height="30"/>
@@ -282,12 +279,11 @@
                     <connections>
                         <outlet property="pswField" destination="W76-rq-Y5x" id="b0T-JU-OTh"/>
                         <outlet property="userNameField" destination="xpz-Hw-fvS" id="QJM-6A-td7"/>
-                        <segue destination="c2P-gF-ZJy" kind="push" identifier="Home" id="B2F-Jj-aOs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="123.75" y="108.75"/>
+            <point key="canvasLocation" x="1086" y="863"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="5s9-Vr-gMo">
@@ -326,7 +322,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="登录_07" translatesAutoresizingMaskIntoConstraints="NO" id="qSc-jX-VBC">
                                         <rect key="frame" x="8" y="4" width="50" height="36"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hV1-bX-IHp">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hV1-bX-IHp">
                                         <rect key="frame" x="66" y="5" width="208" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="TxI-LE-eCx"/>
@@ -359,7 +355,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="登录_11" translatesAutoresizingMaskIntoConstraints="NO" id="gF8-AR-Ttr">
                                         <rect key="frame" x="8" y="4" width="50" height="36"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uLN-sN-7gw">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uLN-sN-7gw">
                                         <rect key="frame" x="66" y="4" width="208" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="7bE-46-38z"/>
@@ -392,7 +388,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="登录_11" translatesAutoresizingMaskIntoConstraints="NO" id="L9z-Wg-49L">
                                         <rect key="frame" x="8" y="4" width="50" height="36"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bdy-1W-na1">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请再次输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bdy-1W-na1">
                                         <rect key="frame" x="66" y="4" width="208" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="E3l-nm-jdc"/>
@@ -444,6 +440,132 @@
             </objects>
             <point key="canvasLocation" x="-139" y="820"/>
         </scene>
+        <!--使用说明-->
+        <scene sceneID="MHG-Ox-eOH">
+            <objects>
+                <viewController id="Swm-O1-O14" customClass="ExplainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FNw-Le-lzT"/>
+                        <viewControllerLayoutGuide type="bottom" id="ygc-vO-Tx1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Xj-Tw-Bnh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="使用说明" id="Otc-K4-AUq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIh-fd-Fcv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="-563"/>
+        </scene>
+        <!--意见反馈-->
+        <scene sceneID="Ucb-S4-S96">
+            <objects>
+                <viewController id="Ev2-u6-q97" customClass="FeedbackViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hwQ-A2-kMC"/>
+                        <viewControllerLayoutGuide type="bottom" id="gSP-fh-kcA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1pn-Jf-rtv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ce1-0B-H6R">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="反馈类型" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNk-Xr-Vib">
+                                        <rect key="frame" x="8" y="12" width="70" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.28235294117647058" green="0.28627450980392155" blue="0.29019607843137257" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="意见反馈_03" translatesAutoresizingMaskIntoConstraints="NO" id="rum-Za-pBh">
+                                        <rect key="frame" x="256" y="3" width="56" height="36"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8H-sY-eVJ">
+                                        <rect key="frame" x="8" y="0.0" width="304" height="43"/>
+                                        <connections>
+                                            <action selector="Clock:" destination="Ev2-u6-q97" eventType="touchUpInside" id="rFx-11-0gC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rum-Za-pBh" secondAttribute="trailing" constant="8" id="DkM-Et-03u"/>
+                                    <constraint firstItem="rum-Za-pBh" firstAttribute="centerY" secondItem="ce1-0B-H6R" secondAttribute="centerY" id="HOc-WQ-dvd"/>
+                                    <constraint firstAttribute="trailing" secondItem="p8H-sY-eVJ" secondAttribute="trailing" constant="8" id="LaD-cC-XsC"/>
+                                    <constraint firstItem="NNk-Xr-Vib" firstAttribute="leading" secondItem="ce1-0B-H6R" secondAttribute="leading" constant="8" id="RJk-oM-gWj"/>
+                                    <constraint firstAttribute="bottom" secondItem="p8H-sY-eVJ" secondAttribute="bottom" id="TB4-O1-Zd9"/>
+                                    <constraint firstItem="NNk-Xr-Vib" firstAttribute="centerY" secondItem="ce1-0B-H6R" secondAttribute="centerY" id="aX5-2Q-p7Q"/>
+                                    <constraint firstItem="p8H-sY-eVJ" firstAttribute="top" secondItem="ce1-0B-H6R" secondAttribute="top" id="el9-YH-LCG"/>
+                                    <constraint firstAttribute="height" constant="44" id="v8i-BT-MxV"/>
+                                    <constraint firstItem="p8H-sY-eVJ" firstAttribute="leading" secondItem="ce1-0B-H6R" secondAttribute="leading" constant="8" id="zgk-pI-K80"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ASM-rf-ILo">
+                                <rect key="frame" x="0.0" y="116" width="320" height="128"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="x8u-Bl-Ua8" customClass="PlaceholderTextView">
+                                        <rect key="frame" x="10" y="0.0" width="298" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="x8u-Bl-Ua8" firstAttribute="top" secondItem="ASM-rf-ILo" secondAttribute="top" id="8ET-I8-ij9"/>
+                                    <constraint firstAttribute="height" constant="128" id="JmT-7P-6cl"/>
+                                    <constraint firstAttribute="bottom" secondItem="x8u-Bl-Ua8" secondAttribute="bottom" id="MJZ-LU-1d9"/>
+                                    <constraint firstItem="x8u-Bl-Ua8" firstAttribute="leading" secondItem="ASM-rf-ILo" secondAttribute="leading" constant="10" id="dn2-B8-gbG"/>
+                                    <constraint firstAttribute="trailing" secondItem="x8u-Bl-Ua8" secondAttribute="trailing" constant="10" id="ja6-Wi-fsK"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Smh-tp-Tnz">
+                                <rect key="frame" x="0.0" y="252" width="320" height="44"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vu1-Fv-AA7">
+                                        <rect key="frame" x="8" y="0.0" width="304" height="44"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="11N-XA-YFd"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vu1-Fv-AA7" secondAttribute="trailing" constant="8" id="aRv-Sf-9gQ"/>
+                                    <constraint firstItem="Vu1-Fv-AA7" firstAttribute="leading" secondItem="Smh-tp-Tnz" secondAttribute="leading" constant="8" id="b5h-xn-TTl"/>
+                                    <constraint firstItem="Vu1-Fv-AA7" firstAttribute="top" secondItem="Smh-tp-Tnz" secondAttribute="top" id="foP-df-iNe"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vu1-Fv-AA7" secondAttribute="bottom" id="gRv-Dh-UCb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176470588238" green="0.95686274509803926" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ASM-rf-ILo" secondAttribute="trailing" id="BRg-au-UhM"/>
+                            <constraint firstItem="ASM-rf-ILo" firstAttribute="top" secondItem="ce1-0B-H6R" secondAttribute="bottom" constant="8" id="Fq7-oQ-GXP"/>
+                            <constraint firstItem="Smh-tp-Tnz" firstAttribute="top" secondItem="ASM-rf-ILo" secondAttribute="bottom" constant="8" id="GkJ-FV-IfV"/>
+                            <constraint firstAttribute="trailing" secondItem="ce1-0B-H6R" secondAttribute="trailing" id="Pxi-d2-OJw"/>
+                            <constraint firstItem="ce1-0B-H6R" firstAttribute="leading" secondItem="1pn-Jf-rtv" secondAttribute="leading" id="WSA-Tx-BpT"/>
+                            <constraint firstItem="ce1-0B-H6R" firstAttribute="top" secondItem="hwQ-A2-kMC" secondAttribute="bottom" id="baH-wa-MxN"/>
+                            <constraint firstItem="ASM-rf-ILo" firstAttribute="leading" secondItem="1pn-Jf-rtv" secondAttribute="leading" id="bqq-EV-JOc"/>
+                            <constraint firstItem="Smh-tp-Tnz" firstAttribute="leading" secondItem="1pn-Jf-rtv" secondAttribute="leading" id="jgO-Bg-7To"/>
+                            <constraint firstAttribute="trailing" secondItem="Smh-tp-Tnz" secondAttribute="trailing" id="sD1-Gb-KBW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="意见反馈" id="bBo-uH-gpB"/>
+                    <connections>
+                        <outlet property="placeholderTextView" destination="x8u-Bl-Ua8" id="vbK-go-IKa"/>
+                        <outlet property="userName" destination="Vu1-Fv-AA7" id="aQ2-ab-d6X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqI-ZF-Txf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1691.25" y="-161.25"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="sP5-JN-Ftl">
             <objects>
@@ -456,36 +578,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gn-J8-6UG">
-                                <rect key="frame" x="10" y="444" width="54" height="30"/>
-                                <state key="normal" title="中文会话"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gn-J8-6UG">
+                                <rect key="frame" x="10" y="444" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Hc1-S5-Ylj"/>
+                                    <constraint firstAttribute="height" constant="30" id="bm9-7r-Yuv"/>
+                                </constraints>
+                                <state key="normal" image="首页-查看2_20"/>
+                                <state key="selected" image="首页-查看_15"/>
                                 <connections>
                                     <action selector="conversation:" destination="c2P-gF-ZJy" eventType="touchUpInside" id="LFf-fS-2Lm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiF-hk-7BB">
-                                <rect key="frame" x="195" y="444" width="46" height="30"/>
-                                <state key="normal" title="中译英"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiF-hk-7BB">
+                                <rect key="frame" x="143" y="427" width="150" height="65"/>
+                                <state key="normal" image="首页-查看_19"/>
+                                <state key="selected" image="首页-查看2_24"/>
                                 <connections>
                                     <action selector="cnEntranslation:" destination="c2P-gF-ZJy" eventType="touchUpInside" id="VYi-b8-L7r"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdE-GE-GxM">
-                                <rect key="frame" x="263" y="444" width="46" height="30"/>
-                                <state key="normal" title="英译中"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdE-GE-GxM">
+                                <rect key="frame" x="211" y="427" width="150" height="65"/>
+                                <state key="normal" image="首页-查看_21"/>
+                                <state key="selected" image="首页-查看2_26"/>
                                 <connections>
                                     <action selector="Encntranslation:" destination="c2P-gF-ZJy" eventType="touchUpInside" id="14k-zw-oK2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuY-8r-NR8">
-                                <rect key="frame" x="95" y="444" width="54" height="30"/>
-                                <state key="normal" title="英文会话"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuY-8r-NR8">
+                                <rect key="frame" x="95" y="444" width="70" height="30"/>
+                                <state key="normal" image="首页-查看_17"/>
+                                <state key="selected" image="首页-查看2_22"/>
                                 <connections>
                                     <action selector="enconversation:" destination="c2P-gF-ZJy" eventType="touchUpInside" id="5g5-ye-gcQ"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7cH-MX-PHy">
-                                <rect key="frame" x="0.0" y="134" width="320" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7cH-MX-PHy">
+                                <rect key="frame" x="0.0" y="197" width="320" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
                                     <segment title="会话状态"/>
@@ -497,48 +628,48 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRo-Uq-jIS">
-                                <rect key="frame" x="0.0" y="163" width="160" height="1"/>
+                                <rect key="frame" x="0.0" y="227" width="160" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.75686274509803919" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="首页-查看_03" translatesAutoresizingMaskIntoConstraints="NO" id="DPd-Ce-Dol">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="134"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="134" id="jdF-7K-1OL"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="首页-查看_03" translatesAutoresizingMaskIntoConstraints="NO" id="DPd-Ce-Dol">
+                                <rect key="frame" x="0.0" y="64" width="320" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9Gn-J8-6UG" firstAttribute="leading" secondItem="hzD-P5-gDa" secondAttribute="leading" constant="10" id="3HJ-WP-XSO"/>
-                            <constraint firstItem="DPd-Ce-Dol" firstAttribute="centerX" secondItem="hzD-P5-gDa" secondAttribute="centerX" id="4zo-JR-Lm5"/>
-                            <constraint firstItem="eA8-bj-GxR" firstAttribute="top" secondItem="tiF-hk-7BB" secondAttribute="bottom" constant="6" id="9Tk-PH-aWD"/>
-                            <constraint firstItem="fdE-GE-GxM" firstAttribute="width" secondItem="9Gn-J8-6UG" secondAttribute="width" id="IXe-b2-V2l"/>
-                            <constraint firstItem="DPd-Ce-Dol" firstAttribute="top" secondItem="hzD-P5-gDa" secondAttribute="topMargin" id="Iay-rQ-Lhe"/>
-                            <constraint firstItem="eA8-bj-GxR" firstAttribute="top" secondItem="9Gn-J8-6UG" secondAttribute="bottom" constant="6" id="Lal-pP-26a"/>
-                            <constraint firstItem="NuY-8r-NR8" firstAttribute="leading" secondItem="9Gn-J8-6UG" secondAttribute="trailing" constant="31" id="Lsp-aG-0Am"/>
-                            <constraint firstItem="eA8-bj-GxR" firstAttribute="top" secondItem="fdE-GE-GxM" secondAttribute="bottom" constant="6" id="QgH-rR-Bgy"/>
-                            <constraint firstItem="tiF-hk-7BB" firstAttribute="width" secondItem="9Gn-J8-6UG" secondAttribute="width" id="SCj-IE-ykV"/>
-                            <constraint firstItem="tiF-hk-7BB" firstAttribute="leading" secondItem="NuY-8r-NR8" secondAttribute="trailing" constant="30" id="UU9-WW-ygb"/>
-                            <constraint firstItem="tiF-hk-7BB" firstAttribute="height" secondItem="9Gn-J8-6UG" secondAttribute="height" id="WmF-cT-mXU"/>
-                            <constraint firstItem="eA8-bj-GxR" firstAttribute="top" secondItem="NuY-8r-NR8" secondAttribute="bottom" constant="6" id="YpW-JV-eLA"/>
-                            <constraint firstItem="fdE-GE-GxM" firstAttribute="height" secondItem="9Gn-J8-6UG" secondAttribute="height" id="ZnL-zQ-iV6"/>
-                            <constraint firstAttribute="trailing" secondItem="7cH-MX-PHy" secondAttribute="trailing" id="f6Q-dk-LMn"/>
-                            <constraint firstItem="NuY-8r-NR8" firstAttribute="height" secondItem="9Gn-J8-6UG" secondAttribute="height" id="gpQ-YS-a0Q"/>
-                            <constraint firstItem="fdE-GE-GxM" firstAttribute="leading" secondItem="tiF-hk-7BB" secondAttribute="trailing" constant="22" id="ifA-mr-zeb"/>
-                            <constraint firstItem="NuY-8r-NR8" firstAttribute="width" secondItem="9Gn-J8-6UG" secondAttribute="width" id="jFD-ov-aaa"/>
-                            <constraint firstItem="7cH-MX-PHy" firstAttribute="leading" secondItem="hzD-P5-gDa" secondAttribute="leading" id="loS-yw-fQ2"/>
-                            <constraint firstAttribute="trailing" secondItem="fdE-GE-GxM" secondAttribute="trailing" constant="11" id="nUJ-Ce-St9"/>
-                            <constraint firstItem="7cH-MX-PHy" firstAttribute="top" secondItem="DPd-Ce-Dol" secondAttribute="bottom" id="xSm-o4-Dos"/>
+                            <constraint firstAttribute="trailing" secondItem="fdE-GE-GxM" secondAttribute="trailing" constant="15" id="B6H-dV-hzR"/>
+                            <constraint firstItem="eA8-bj-GxR" firstAttribute="top" secondItem="tiF-hk-7BB" secondAttribute="bottom" constant="6" id="J6h-yz-y12"/>
+                            <constraint firstItem="eA8-bj-GxR" firstAttribute="top" secondItem="fdE-GE-GxM" secondAttribute="bottom" constant="6" id="MAp-3R-CyF"/>
+                            <constraint firstItem="eA8-bj-GxR" firstAttribute="top" secondItem="9Gn-J8-6UG" secondAttribute="bottom" constant="6" id="On9-Kn-bup"/>
+                            <constraint firstItem="NuY-8r-NR8" firstAttribute="height" secondItem="9Gn-J8-6UG" secondAttribute="height" id="Vx6-T9-vhi"/>
+                            <constraint firstItem="tiF-hk-7BB" firstAttribute="leading" secondItem="NuY-8r-NR8" secondAttribute="trailing" constant="15" id="bxp-ig-q64"/>
+                            <constraint firstItem="NuY-8r-NR8" firstAttribute="width" secondItem="9Gn-J8-6UG" secondAttribute="width" id="c3A-bB-49h"/>
+                            <constraint firstItem="fdE-GE-GxM" firstAttribute="width" secondItem="9Gn-J8-6UG" secondAttribute="width" id="dUw-0S-SAN"/>
+                            <constraint firstItem="tiF-hk-7BB" firstAttribute="height" secondItem="9Gn-J8-6UG" secondAttribute="height" id="enR-kS-kSt"/>
+                            <constraint firstItem="fdE-GE-GxM" firstAttribute="height" secondItem="9Gn-J8-6UG" secondAttribute="height" id="i4n-33-gUr"/>
+                            <constraint firstItem="tiF-hk-7BB" firstAttribute="width" secondItem="9Gn-J8-6UG" secondAttribute="width" id="oaw-QF-FRh"/>
+                            <constraint firstItem="eA8-bj-GxR" firstAttribute="top" secondItem="NuY-8r-NR8" secondAttribute="bottom" constant="6" id="qpi-na-euA"/>
+                            <constraint firstItem="NuY-8r-NR8" firstAttribute="leading" secondItem="9Gn-J8-6UG" secondAttribute="trailing" constant="15" id="vVF-wx-i2M"/>
+                            <constraint firstItem="9Gn-J8-6UG" firstAttribute="leading" secondItem="hzD-P5-gDa" secondAttribute="leading" constant="10" id="wDn-uP-Nd7"/>
+                            <constraint firstItem="fdE-GE-GxM" firstAttribute="leading" secondItem="tiF-hk-7BB" secondAttribute="trailing" constant="15" id="xP9-48-WBl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wdV-qQ-XU8"/>
                     <connections>
+                        <outlet property="fourButton" destination="fdE-GE-GxM" id="rgd-rS-iTr"/>
+                        <outlet property="homeButton" destination="9Gn-J8-6UG" id="JyL-sA-vuZ"/>
                         <outlet property="homeSegmentedContor" destination="7cH-MX-PHy" id="eau-sh-sK7"/>
                         <outlet property="selectView" destination="kRo-Uq-jIS" id="K40-ZN-Nhe"/>
+                        <outlet property="threeButton" destination="tiF-hk-7BB" id="DH4-4A-edr"/>
+                        <outlet property="twoButton" destination="NuY-8r-NR8" id="Mwo-dx-JM6"/>
+                        <segue destination="BYZ-38-t0r" kind="push" identifier="login" id="PKj-Kf-REo"/>
+                        <segue destination="Swm-O1-O14" kind="push" identifier="Explain" id="E1q-vU-y4u"/>
+                        <segue destination="Ev2-u6-q97" kind="push" identifier="Feedback" id="FXQ-8K-qgB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="77i-gJ-DXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -547,9 +678,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="意见反馈_03" width="23" height="37"/>
         <image name="登录_03" width="107" height="111"/>
         <image name="登录_07" width="19" height="18"/>
         <image name="登录_11" width="13" height="17"/>
+        <image name="首页-查看2_20" width="149" height="65"/>
+        <image name="首页-查看2_22" width="150" height="65"/>
+        <image name="首页-查看2_24" width="150" height="65"/>
+        <image name="首页-查看2_26" width="150" height="65"/>
         <image name="首页-查看_03" width="712" height="406"/>
+        <image name="首页-查看_15" width="149" height="65"/>
+        <image name="首页-查看_17" width="150" height="65"/>
+        <image name="首页-查看_19" width="150" height="65"/>
+        <image name="首页-查看_21" width="150" height="65"/>
     </resources>
 </document>

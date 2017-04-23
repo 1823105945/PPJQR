@@ -15,3 +15,7 @@
 @implementation WeatherResultModel
 
 @end
+@implementation WeatherDataModel
+
+@end
+

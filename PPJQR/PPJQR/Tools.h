@@ -14,4 +14,6 @@
 +(NSDictionary *)jsontodic:(NSString *)str;
 
 +(void)ANSWER:(NSString *)answerStr success:(void (^)(id responseObject,NSString *type))success;
+
++(NSString *)strPec:(NSArray *)rect;
 @end

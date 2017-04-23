@@ -10,4 +10,8 @@
 
 @interface HomeLeftView : UIView
 
+@property(nonatomic,copy)void (^ HomeLeftClock)();
+@property(nonatomic,copy)void (^ LeftClockCell)(NSInteger index);
+@property(nonatomic,copy)void (^ HomeLeftFootClock)(NSInteger index);
+-(void)_initHomeLeftView;
 @end

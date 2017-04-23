@@ -28,7 +28,7 @@
     }else if(self.pswField.text.length==0){
         [BaseView _init:@"请输入密码"];
     }else{
-        [self performSegueWithIdentifier:@"Home" sender:nil];
+        [self blackController];
     }
     
 }

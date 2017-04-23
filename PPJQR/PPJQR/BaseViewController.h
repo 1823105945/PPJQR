@@ -11,4 +11,6 @@
 
 @interface BaseViewController : UIViewController
 -(void)homeNaviUI;
+-(void)blackController;
+-(void)rightUI;
 @end

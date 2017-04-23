@@ -30,6 +30,16 @@
     UIBarButtonItem *item=[[UIBarButtonItem alloc]initWithImage:SETIMAGENAME(@"首页-查看2_02") style:UIBarButtonItemStylePlain target:self action:@selector(mulist)];
     self.navigationItem.leftBarButtonItem=item;
 }
+
+-(void)rightUI{
+    UIBarButtonItem *item=[[UIBarButtonItem alloc]initWithTitle:@"提交" style:UIBarButtonItemStylePlain target:self action:@selector(Submit)];
+    self.navigationItem.rightBarButtonItem=item;
+}
+
+-(void)Submit{
+
+}
+
 -(void)mulist{
 
 }

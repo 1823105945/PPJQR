@@ -54,4 +54,10 @@
     }
     
 }
+
++(NSString *)strPec:(NSArray *)rect{
+    return [rect componentsJoinedByString:@","];
+}
+
+
 @end

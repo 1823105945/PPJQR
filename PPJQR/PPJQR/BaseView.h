@@ -14,4 +14,7 @@
 
 +(BaseView *)baseShar;
 
+-(void)_initPop:(UIView *)popView Type:(NSInteger)type;
+
+-(void)dissMissPop:(BOOL)animated;
 @end

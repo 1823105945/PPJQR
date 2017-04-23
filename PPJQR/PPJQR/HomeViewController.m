@@ -18,12 +18,21 @@
 #import "PlayModel.h"
 #import "WeatherModel.h"
 #import <FSAudioStream.h>
+#import "HomeLeftView.h"
+#import <CoreBluetooth/CoreBluetooth.h>
 
-@interface HomeViewController ()<IFlySpeechRecognizerDelegate,IFlySpeechSynthesizerDelegate,UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>{
+@interface HomeViewController ()<IFlySpeechRecognizerDelegate,IFlySpeechSynthesizerDelegate,UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource,CBCentralManagerDelegate>{
     UIScrollView *homeScrollView;
     UITableView *homeTableView;
     AVAudioRecorder *_audioRecorder;
+    HomeLeftView *homeLeftView;
+      CBCentralManager *_bluetoothManager;
+    BOOL _canShake;
     
+    __weak IBOutlet UIButton *twoButton;
+    __weak IBOutlet UIButton *threeButton;
+    __weak IBOutlet UIButton *homeButton;
+    __weak IBOutlet UIButton *fourButton;
 }
 @property(nonatomic,strong)NSString *returnType;
 @property(nonatomic,strong)MoreResultsModel *moreResultsModel;
@@ -46,8 +55,60 @@
 @end
 
 @implementation HomeViewController
+
+-(void)leftUI{
+    
+    __weak typeof(self)SelfWeek=self;
+    homeLeftView=[[[NSBundle mainBundle]loadNibNamed:@"HomeLeftView" owner:self options:nil]lastObject];
+    [homeLeftView _initHomeLeftView];
+    homeLeftView.HomeLeftClock=^(){
+        [SelfWeek performSegueWithIdentifier:@"login" sender:nil];
+    };
+    homeLeftView.HomeLeftFootClock=^(NSInteger index){
+        if (index==1000) {
+            [SelfWeek performSegueWithIdentifier:@"login" sender:nil];
+        }else{
+            NSLog(@"退出账号");
+        }
+    };
+    homeLeftView.LeftClockCell=^(NSInteger index){
+        if (index==0) {
+            [SelfWeek performSegueWithIdentifier:@"Explain" sender:nil];
+        }else if(index==1){
+            [SelfWeek performSegueWithIdentifier:@"Feedback" sender:nil];
+        }
+    };
+    homeLeftView.hidden=YES;
+    homeLeftView.frame=CGRectMake(0, 64, ViewSize.width, ViewSize.height-64);
+    [self.view addSubview:homeLeftView];
+}
+
+-(void)_initbluetoothManager{
+    _bluetoothManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+}
+-(void)centralManagerDidUpdateState:(CBCentralManager *)central
+{
+    //第一次打开或者每次蓝牙状态改变都会调用这个函数
+    if(central.state==CBCentralManagerStatePoweredOn)
+    {
+        NSLog(@"蓝牙设备开着");
+        _canShake=YES;
+    }
+    else
+    {
+        NSLog(@"蓝牙设备关着");
+       
+        _canShake=NO;
+    }
+}
+
+
 //中文会话
 - (IBAction)conversation:(id)sender {
+    twoButton.selected=NO;
+    threeButton.selected=NO;
+    homeButton.selected=YES;
+    fourButton.selected=NO;
     //设置为麦克风输入语音
     [_iFlySpeechUnderstander setParameter:IFLY_AUDIO_SOURCE_MIC forKey:@"audio_source"];
     
@@ -73,26 +134,39 @@
 
     
    }
+
+
 //英文会话
 - (IBAction)enconversation:(id)sender {
+    twoButton.selected=YES;
+    threeButton.selected=NO;
+    homeButton.selected=NO;
+    fourButton.selected=NO;
     [IATConfig sharedInstance].language = [IFlySpeechConstant LANGUAGE_ENGLISH];
      [_iFlySpeechUnderstander setParameter:[IATConfig sharedInstance].language forKey:[IFlySpeechConstant LANGUAGE]];
 }
 //中译英
 - (IBAction)cnEntranslation:(id)sender {
-    
+    twoButton.selected=NO;
+    threeButton.selected=YES;
+    homeButton.selected=NO;
+    fourButton.selected=NO;
 }
 //英译中
 - (IBAction)Encntranslation:(id)sender {
+    twoButton.selected=NO;
+    threeButton.selected=NO;
+    homeButton.selected=NO;
+    fourButton.selected=YES;
     
 }
 - (IBAction)homeClock:(id)sender {
     UISegmentedControl *segmentedControl=(UISegmentedControl *)sender;
     if (segmentedControl.selectedSegmentIndex==0) {
-        self.selectView.frame=CGRectMake(0, 163, ViewSize.width/2, 1);
+        self.selectView.frame=CGRectMake(0, 227, ViewSize.width/2, 1);
         
     }else{
-        self.selectView.frame=CGRectMake(ViewSize.width/2, 163, ViewSize.width/2, 1);
+        self.selectView.frame=CGRectMake(ViewSize.width/2, 227, ViewSize.width/2, 1);
     }
     [homeScrollView setContentOffset:CGPointMake(ViewSize.width*segmentedControl.selectedSegmentIndex, 0) animated:YES];//.contentOffset=CGPointMake(ViewSize.width*segmentedControl.selectedSegmentIndex, 0);
 }
@@ -160,13 +234,25 @@
             if (SelfWeek.playModel.data.result>0) {
                ResultModel *resultModel= [SelfWeek.playModel.data.result objectAtIndex:0];
                 [SelfWeek startPlay:resultModel.downloadUrl];
+                [SelfWeek dataSouse:@"weixin" Value:SelfWeek.playModel.text];
+                [SelfWeek dataSouse:@"rhl" Value:resultModel.sourceName];
+                [SelfWeek speechSynthesis:resultModel.sourceName];
+
             }
             
         }else if ([responseObject isKindOfClass:[WeatherModel class]]){
             SelfWeek.weatherModel=responseObject;
+            if (SelfWeek.weatherModel.data.result>0) {
+                WeatherResultModel *WeatherResultModel= [SelfWeek.weatherModel.data.result objectAtIndex:0];
+                [SelfWeek dataSouse:@"weixin" Value:SelfWeek.weatherModel.text];
+                NSString *str=[NSString stringWithFormat:@"%@%@%@%@",WeatherResultModel.city,WeatherResultModel.weather,WeatherResultModel.tempRange,WeatherResultModel.wind];
+                [SelfWeek dataSouse:@"rhl" Value:str];
+                [SelfWeek speechSynthesis:str];
+            }
+            
 //            SelfWeek
         }else{
-            
+            [SelfWeek speechSynthesis:@"抱歉不知道你在说什么"];
         }
     }];
 //    [self hecheng];
@@ -419,10 +505,13 @@
     homeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self initUI];
+    [self leftUI];
+    homeButton.selected=YES;
+//    [self conversation:nil];
 }
 
 -(void)mulist{
-    
+    homeLeftView.hidden=NO;
 }
 
 -(void)initUI{
@@ -431,7 +520,7 @@
     NSDictionary *dics = [NSDictionary dictionaryWithObjectsAndKeys:RGBA(0, 0, 0,1),UITextAttributeTextColor,nil];
     [self.homeSegmentedContor setTitleTextAttributes:dics forState:UIControlStateNormal];
     self.homeSegmentedContor.tintColor = [UIColor whiteColor];
-    homeScrollView=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 200, ViewSize.width, ViewSize.height-244)];
+    homeScrollView=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 227, ViewSize.width, ViewSize.height-227-44)];
     homeScrollView.delegate=self;
     homeScrollView.backgroundColor=[UIColor redColor];
     homeScrollView.contentSize=CGSizeMake(ViewSize.width*2,0 );
@@ -446,7 +535,7 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     CGPoint point = scrollView.contentOffset;
     self.homeSegmentedContor.selectedSegmentIndex=point.x/ViewSize.width;
-    self.selectView.frame=CGRectMake(point.x/ViewSize.width*ViewSize.width/2, 199, ViewSize.width/2, 1);
+    self.selectView.frame=CGRectMake(point.x/ViewSize.width*ViewSize.width/2, 227, ViewSize.width/2, 1);
 }
 //泡泡文本
 - (UIView *)bubbleView:(NSString *)text from:(BOOL)fromSelf withPosition:(int)position{
@@ -565,7 +654,7 @@
     if ([[dict objectForKey:@"name"]isEqualToString:@"rhl"]) {
         photo = [[UIImageView alloc]initWithFrame:CGRectMake(ViewSize.width-60, 10, 50, 50)];
         [cell addSubview:photo];
-        photo.image = [UIImage imageNamed:@"photo1"];
+        photo.image = [UIImage imageNamed:@"登录_07"];
         
         if ([[dict objectForKey:@"content"] isEqualToString:@"0"]) {
             [cell addSubview:[self yuyinView:1 from:YES withIndexRow:indexPath.row withPosition:65]];
@@ -578,7 +667,7 @@
     }else{
         photo = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 50, 50)];
         [cell addSubview:photo];
-        photo.image = [UIImage imageNamed:@"photo"];
+        photo.image = [UIImage imageNamed:@"登录_03"];
         
         if ([[dict objectForKey:@"content"] isEqualToString:@"0"]) {
             [cell addSubview:[self yuyinView:1 from:NO withIndexRow:indexPath.row withPosition:65]];
