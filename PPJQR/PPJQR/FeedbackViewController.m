@@ -9,8 +9,11 @@
 #import "FeedbackViewController.h"
 #import "PlaceholderTextView.h"
 #import "BaseView.h"
+#import "FeedBackView.h"
 
-@interface FeedbackViewController ()
+@interface FeedbackViewController (){
+    FeedBackView *feed;
+}
 @property (nonatomic, strong) PlaceholderTextView * textView;
 @property (weak, nonatomic) IBOutlet PlaceholderTextView *placeholderTextView;
 @property (weak, nonatomic) IBOutlet UITextField *userName;
@@ -22,17 +25,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self rightUI];
+    [self FeedbackUI];
+    
 }
 - (IBAction)Clock:(id)sender {
-    [[BaseView baseShar]_initPop:self.view Type:1];
+    [[BaseView baseShar]_initPop:feed Type:1];
 }
 
 -(void)FeedbackUI{
-    
-
+    feed=[[[NSBundle mainBundle]loadNibNamed:@"FeedBackView" owner:self options:nil]lastObject];
+    [feed _init];
 }
 
 -(void)Submit{
+    if (feed.title.length==0) {
+        
+    }
     NSLog(@"提交");
 }
 

@@ -27,7 +27,7 @@
 +(void)ANSWER:(NSString *)answerStr success:(void (^)(id responseObject,NSString *type))success{
     NSDictionary *dic=[Tools jsontodic:answerStr];
     NSError *error;
-    if ([[dic valueForKey:@"service"] isEqualToString:OPENQA]||[[dic valueForKey:@"service" ] isEqualToString: BAIKE]) {
+    if ([[dic valueForKey:@"operation"] isEqualToString:OPENQA]) {
         MoreResultsModel *moreResultsModel=[[MoreResultsModel alloc]initWithDictionary:dic error:&error];
         if (error) {
             [BaseView _init:@"请检查网络连接"];

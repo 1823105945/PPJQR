@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FeedBackView : UIView
-
+@property(nonatomic,strong)NSString *title;
+-(void)_init;
 @end

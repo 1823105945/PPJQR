@@ -28,7 +28,7 @@
     HomeLeftView *homeLeftView;
       CBCentralManager *_bluetoothManager;
     BOOL _canShake;
-    
+    NSTimer *timeT;
     __weak IBOutlet UIButton *twoButton;
     __weak IBOutlet UIButton *threeButton;
     __weak IBOutlet UIButton *homeButton;
@@ -236,7 +236,7 @@
                 [SelfWeek startPlay:resultModel.downloadUrl];
                 [SelfWeek dataSouse:@"weixin" Value:SelfWeek.playModel.text];
                 [SelfWeek dataSouse:@"rhl" Value:resultModel.sourceName];
-                [SelfWeek speechSynthesis:resultModel.sourceName];
+//                [SelfWeek speechSynthesis:resultModel.sourceName];
 
             }
             
@@ -281,8 +281,11 @@
     __weak typeof(self) weakSelf = self;
     _audioStream.onCompletion=^(){
         NSLog(@"播放完成!");
+//
         // 播放完移除对象，重新创建对象播放下一首
-        [weakSelf removeFromParentViewController];
+//        [weakSelf removeFromParentViewController];
+        [weakSelf conversation:nil];
+//        [self yanchi];
        
     };
     
@@ -389,8 +392,25 @@
 - (void) onSpeakProgress:(int) progress beginPos:(int)beginPos endPos:(int)endPos
 {
     NSLog(@"speak progress %2d%%.", progress);
+    NSLog(@"ttttttttt%d",progress);
+    if (progress==100) {
+        [self yanchi];
+    }
+
 }
 
+-(void)yanchi{
+    double delayInSeconds = 1.0;
+    __weak typeof(self) bself = self;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [bself delayMethod]; });
+}
+    
+-(void)delayMethod{
+    NSLog(@"==========");
+    [self conversation:nil];
+}
 
 /**
  合成结束（完成）回调

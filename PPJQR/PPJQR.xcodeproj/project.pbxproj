@@ -32,6 +32,8 @@
 		DEA3AC511EA8EB59008A1A06 /* FootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA3AC501EA8EB59008A1A06 /* FootView.xib */; };
 		DEA3AC551EA8F77B008A1A06 /* ExplainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3AC541EA8F77B008A1A06 /* ExplainViewController.m */; };
 		DEA3AC581EA8F8A0008A1A06 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3AC571EA8F8A0008A1A06 /* FeedbackViewController.m */; };
+		DEAEAE9C1EAE20FE00289D5B /* FeedBackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAEAE9A1EAE20FE00289D5B /* FeedBackCell.m */; };
+		DEAEAE9D1EAE20FE00289D5B /* FeedBackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEAEAE9B1EAE20FE00289D5B /* FeedBackCell.xib */; };
 		DEC7338B1EA78B0600F24795 /* CALayer+XibConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC7338A1EA78B0600F24795 /* CALayer+XibConfiguration.m */; };
 		DEC7338E1EA78FC900F24795 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC7338D1EA78FC900F24795 /* RegisterViewController.m */; };
 		DECBF4E31E9E5ADD002A229B /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = DECBF4E01E9E5ADD002A229B /* BaseView.m */; };
@@ -96,6 +98,9 @@
 		DEA3AC541EA8F77B008A1A06 /* ExplainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplainViewController.m; sourceTree = "<group>"; };
 		DEA3AC561EA8F8A0008A1A06 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
 		DEA3AC571EA8F8A0008A1A06 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		DEAEAE991EAE20FE00289D5B /* FeedBackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackCell.h; sourceTree = "<group>"; };
+		DEAEAE9A1EAE20FE00289D5B /* FeedBackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackCell.m; sourceTree = "<group>"; };
+		DEAEAE9B1EAE20FE00289D5B /* FeedBackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedBackCell.xib; sourceTree = "<group>"; };
 		DEC733891EA78B0600F24795 /* CALayer+XibConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+XibConfiguration.h"; sourceTree = "<group>"; };
 		DEC7338A1EA78B0600F24795 /* CALayer+XibConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+XibConfiguration.m"; sourceTree = "<group>"; };
 		DEC7338C1EA78FC900F24795 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -263,6 +268,9 @@
 				DED83EA51EACA03400E3468D /* FeedBackView.h */,
 				DED83EA61EACA03400E3468D /* FeedBackView.m */,
 				DED83EA81EACA03E00E3468D /* FeedBackView.xib */,
+				DEAEAE991EAE20FE00289D5B /* FeedBackCell.h */,
+				DEAEAE9A1EAE20FE00289D5B /* FeedBackCell.m */,
+				DEAEAE9B1EAE20FE00289D5B /* FeedBackCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -434,6 +442,7 @@
 				DEA3AC511EA8EB59008A1A06 /* FootView.xib in Resources */,
 				DEEFFA741E8D55F8001F5D3D /* Assets.xcassets in Resources */,
 				DEA3AC421EA8DE4D008A1A06 /* MenuTVViewCell.xib in Resources */,
+				DEAEAE9D1EAE20FE00289D5B /* FeedBackCell.xib in Resources */,
 				DEEFFA721E8D55F8001F5D3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +516,7 @@
 				DEDC7F881E99F71B00DD2FC4 /* TTSConfig.m in Sources */,
 				DED83EA41EAC9C0A00E3468D /* KLCPopup.m in Sources */,
 				DEC7338B1EA78B0600F24795 /* CALayer+XibConfiguration.m in Sources */,
+				DEAEAE9C1EAE20FE00289D5B /* FeedBackCell.m in Sources */,
 				DEEFFA691E8D55F8001F5D3D /* main.m in Sources */,
 				DEEFFA851E8D5805001F5D3D /* BaseNaviViewController.m in Sources */,
 				DECBF4E31E9E5ADD002A229B /* BaseView.m in Sources */,

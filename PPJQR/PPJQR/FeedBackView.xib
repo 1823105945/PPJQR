@@ -12,11 +12,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FeedBackView">
-            <rect key="frame" x="0.0" y="0.0" width="259" height="412"/>
+            <rect key="frame" x="0.0" y="0.0" width="259" height="293"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l8n-ZR-crK">
-                    <rect key="frame" x="0.0" y="0.0" width="259" height="412"/>
+                    <rect key="frame" x="0.0" y="0.0" width="259" height="293"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
@@ -28,7 +28,10 @@
                 <constraint firstAttribute="trailing" secondItem="l8n-ZR-crK" secondAttribute="trailing" id="y5O-xh-VOx"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-16.5" y="-97"/>
+            <connections>
+                <outlet property="feedTableView" destination="l8n-ZR-crK" id="9ee-Lc-riE"/>
+            </connections>
+            <point key="canvasLocation" x="-16.5" y="-156.5"/>
         </view>
     </objects>
 </document>
