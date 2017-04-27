@@ -581,8 +581,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gn-J8-6UG">
                                 <rect key="frame" x="10" y="444" width="70" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="Hc1-S5-Ylj"/>
-                                    <constraint firstAttribute="height" constant="30" id="bm9-7r-Yuv"/>
+                                    <constraint firstAttribute="height" constant="30" id="CwB-Gi-TgT"/>
+                                    <constraint firstAttribute="width" constant="70" id="MT8-R0-aw8"/>
                                 </constraints>
                                 <state key="normal" image="首页-查看2_20"/>
                                 <state key="selected" image="首页-查看_15"/>
@@ -590,33 +590,20 @@
                                     <action selector="conversation:" destination="c2P-gF-ZJy" eventType="touchUpInside" id="LFf-fS-2Lm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiF-hk-7BB">
-                                <rect key="frame" x="143" y="427" width="150" height="65"/>
-                                <state key="normal" image="首页-查看_19"/>
-                                <state key="selected" image="首页-查看2_24"/>
-                                <connections>
-                                    <action selector="cnEntranslation:" destination="c2P-gF-ZJy" eventType="touchUpInside" id="VYi-b8-L7r"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdE-GE-GxM">
-                                <rect key="frame" x="211" y="427" width="150" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdE-GE-GxM">
+                                <rect key="frame" x="238" y="442" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eTs-Nq-wnp"/>
+                                    <constraint firstAttribute="width" constant="70" id="jB1-xK-S0t"/>
+                                </constraints>
                                 <state key="normal" image="首页-查看_21"/>
                                 <state key="selected" image="首页-查看2_26"/>
                                 <connections>
                                     <action selector="Encntranslation:" destination="c2P-gF-ZJy" eventType="touchUpInside" id="14k-zw-oK2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuY-8r-NR8">
-                                <rect key="frame" x="95" y="444" width="70" height="30"/>
-                                <state key="normal" image="首页-查看_17"/>
-                                <state key="selected" image="首页-查看2_22"/>
-                                <connections>
-                                    <action selector="enconversation:" destination="c2P-gF-ZJy" eventType="touchUpInside" id="5g5-ye-gcQ"/>
-                                </connections>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7cH-MX-PHy">
-                                <rect key="frame" x="0.0" y="197" width="320" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7cH-MX-PHy">
+                                <rect key="frame" x="0.0" y="198" width="320" height="29"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
                                     <segment title="会话状态"/>
@@ -627,36 +614,44 @@
                                     <action selector="homeClock:" destination="c2P-gF-ZJy" eventType="valueChanged" id="fxb-il-L2A"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRo-Uq-jIS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRo-Uq-jIS">
                                 <rect key="frame" x="0.0" y="227" width="160" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.75686274509803919" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="首页-查看_03" translatesAutoresizingMaskIntoConstraints="NO" id="DPd-Ce-Dol">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="首页-查看_03" translatesAutoresizingMaskIntoConstraints="NO" id="DPd-Ce-Dol">
                                 <rect key="frame" x="0.0" y="64" width="320" height="134"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiF-hk-7BB">
+                                <rect key="frame" x="125" y="442" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="ALx-tP-CHq"/>
+                                    <constraint firstAttribute="height" constant="30" id="QyF-b7-gIE"/>
+                                </constraints>
+                                <state key="normal" image="首页-查看_19"/>
+                                <state key="selected" image="首页-查看2_24"/>
+                                <connections>
+                                    <action selector="cnEntranslation:" destination="c2P-gF-ZJy" eventType="touchUpInside" id="VYi-b8-L7r"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="fdE-GE-GxM" secondAttribute="trailing" constant="15" id="B6H-dV-hzR"/>
-                            <constraint firstItem="eA8-bj-GxR" firstAttribute="top" secondItem="tiF-hk-7BB" secondAttribute="bottom" constant="6" id="J6h-yz-y12"/>
-                            <constraint firstItem="eA8-bj-GxR" firstAttribute="top" secondItem="fdE-GE-GxM" secondAttribute="bottom" constant="6" id="MAp-3R-CyF"/>
-                            <constraint firstItem="eA8-bj-GxR" firstAttribute="top" secondItem="9Gn-J8-6UG" secondAttribute="bottom" constant="6" id="On9-Kn-bup"/>
-                            <constraint firstItem="NuY-8r-NR8" firstAttribute="height" secondItem="9Gn-J8-6UG" secondAttribute="height" id="Vx6-T9-vhi"/>
-                            <constraint firstItem="tiF-hk-7BB" firstAttribute="leading" secondItem="NuY-8r-NR8" secondAttribute="trailing" constant="15" id="bxp-ig-q64"/>
-                            <constraint firstItem="NuY-8r-NR8" firstAttribute="width" secondItem="9Gn-J8-6UG" secondAttribute="width" id="c3A-bB-49h"/>
-                            <constraint firstItem="fdE-GE-GxM" firstAttribute="width" secondItem="9Gn-J8-6UG" secondAttribute="width" id="dUw-0S-SAN"/>
-                            <constraint firstItem="tiF-hk-7BB" firstAttribute="height" secondItem="9Gn-J8-6UG" secondAttribute="height" id="enR-kS-kSt"/>
-                            <constraint firstItem="fdE-GE-GxM" firstAttribute="height" secondItem="9Gn-J8-6UG" secondAttribute="height" id="i4n-33-gUr"/>
-                            <constraint firstItem="tiF-hk-7BB" firstAttribute="width" secondItem="9Gn-J8-6UG" secondAttribute="width" id="oaw-QF-FRh"/>
-                            <constraint firstItem="eA8-bj-GxR" firstAttribute="top" secondItem="NuY-8r-NR8" secondAttribute="bottom" constant="6" id="qpi-na-euA"/>
-                            <constraint firstItem="NuY-8r-NR8" firstAttribute="leading" secondItem="9Gn-J8-6UG" secondAttribute="trailing" constant="15" id="vVF-wx-i2M"/>
-                            <constraint firstItem="9Gn-J8-6UG" firstAttribute="leading" secondItem="hzD-P5-gDa" secondAttribute="leading" constant="10" id="wDn-uP-Nd7"/>
-                            <constraint firstItem="fdE-GE-GxM" firstAttribute="leading" secondItem="tiF-hk-7BB" secondAttribute="trailing" constant="15" id="xP9-48-WBl"/>
+                            <constraint firstItem="DPd-Ce-Dol" firstAttribute="leading" secondItem="hzD-P5-gDa" secondAttribute="leading" id="3ii-sA-HhJ"/>
+                            <constraint firstAttribute="trailing" secondItem="DPd-Ce-Dol" secondAttribute="trailing" id="5cv-uj-Ydg"/>
+                            <constraint firstItem="eA8-bj-GxR" firstAttribute="top" secondItem="fdE-GE-GxM" secondAttribute="bottom" constant="8" id="6Bl-QT-pdw"/>
+                            <constraint firstItem="DPd-Ce-Dol" firstAttribute="top" secondItem="GgF-Rx-jWY" secondAttribute="bottom" id="B7f-p9-3yP"/>
+                            <constraint firstItem="kRo-Uq-jIS" firstAttribute="top" secondItem="7cH-MX-PHy" secondAttribute="bottom" id="Fy2-Ur-gIz"/>
+                            <constraint firstItem="eA8-bj-GxR" firstAttribute="top" secondItem="9Gn-J8-6UG" secondAttribute="bottom" constant="6" id="HX0-GZ-zHq"/>
+                            <constraint firstAttribute="trailing" secondItem="fdE-GE-GxM" secondAttribute="trailing" constant="12" id="PPJ-Dd-Jgb"/>
+                            <constraint firstItem="7cH-MX-PHy" firstAttribute="leading" secondItem="hzD-P5-gDa" secondAttribute="leading" id="dKx-oT-C2o"/>
+                            <constraint firstItem="9Gn-J8-6UG" firstAttribute="leading" secondItem="hzD-P5-gDa" secondAttribute="leading" constant="10" id="e1m-qZ-JKz"/>
+                            <constraint firstItem="tiF-hk-7BB" firstAttribute="centerX" secondItem="hzD-P5-gDa" secondAttribute="centerX" id="f67-Jw-9mU"/>
+                            <constraint firstAttribute="trailing" secondItem="7cH-MX-PHy" secondAttribute="trailing" id="lyD-k6-TxE"/>
+                            <constraint firstItem="eA8-bj-GxR" firstAttribute="top" secondItem="tiF-hk-7BB" secondAttribute="bottom" constant="8" id="mSH-mg-zAg"/>
+                            <constraint firstItem="7cH-MX-PHy" firstAttribute="top" secondItem="DPd-Ce-Dol" secondAttribute="bottom" id="u4x-TZ-TFY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wdV-qQ-XU8"/>
@@ -666,7 +661,6 @@
                         <outlet property="homeSegmentedContor" destination="7cH-MX-PHy" id="eau-sh-sK7"/>
                         <outlet property="selectView" destination="kRo-Uq-jIS" id="K40-ZN-Nhe"/>
                         <outlet property="threeButton" destination="tiF-hk-7BB" id="DH4-4A-edr"/>
-                        <outlet property="twoButton" destination="NuY-8r-NR8" id="Mwo-dx-JM6"/>
                         <segue destination="BYZ-38-t0r" kind="push" identifier="login" id="PKj-Kf-REo"/>
                         <segue destination="Swm-O1-O14" kind="push" identifier="Explain" id="E1q-vU-y4u"/>
                         <segue destination="Ev2-u6-q97" kind="push" identifier="Feedback" id="FXQ-8K-qgB"/>
@@ -683,12 +677,10 @@
         <image name="登录_07" width="19" height="18"/>
         <image name="登录_11" width="13" height="17"/>
         <image name="首页-查看2_20" width="149" height="65"/>
-        <image name="首页-查看2_22" width="150" height="65"/>
         <image name="首页-查看2_24" width="150" height="65"/>
         <image name="首页-查看2_26" width="150" height="65"/>
         <image name="首页-查看_03" width="712" height="406"/>
         <image name="首页-查看_15" width="149" height="65"/>
-        <image name="首页-查看_17" width="150" height="65"/>
         <image name="首页-查看_19" width="150" height="65"/>
         <image name="首页-查看_21" width="150" height="65"/>
     </resources>
