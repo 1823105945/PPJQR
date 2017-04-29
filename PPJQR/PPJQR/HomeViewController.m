@@ -21,7 +21,7 @@
 #import "HomeLeftView.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@interface HomeViewController ()<IFlySpeechRecognizerDelegate,IFlySpeechSynthesizerDelegate,UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource,CBCentralManagerDelegate>{
+@interface HomeViewController ()<IFlySpeechRecognizerDelegate,IFlySpeechSynthesizerDelegate,UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource,CBCentralManagerDelegate,IFlyPcmRecorderDelegate>{
     UIScrollView *homeScrollView;
     UITableView *homeTableView;
     AVAudioRecorder *_audioRecorder;
@@ -34,10 +34,12 @@
     __weak IBOutlet UIButton *homeButton;
     __weak IBOutlet UIButton *fourButton;
 }
+@property (nonatomic,strong) IFlyPcmRecorder *pcmRecorder;//录音器，用于音频流识别的数据传入
 @property(nonatomic,strong)NSString *returnType;
 @property(nonatomic,strong)MoreResultsModel *moreResultsModel;
 @property(nonatomic,strong)PlayModel *playModel;
 @property(nonatomic,strong)WeatherModel *weatherModel;
+@property (nonatomic, strong) IFlySpeechRecognizer *iFlySpeechRecognizer;//不带界面的
 //语音语义理解对象
 @property (nonatomic,strong) IFlySpeechUnderstander *iFlySpeechUnderstander;
 @property (nonatomic, strong) NSMutableArray *resultArray;
@@ -138,12 +140,12 @@
 
 //英文会话
 - (IBAction)enconversation:(id)sender {
-    twoButton.selected=YES;
-    threeButton.selected=NO;
-    homeButton.selected=NO;
-    fourButton.selected=NO;
-    [IATConfig sharedInstance].language = [IFlySpeechConstant LANGUAGE_ENGLISH];
-     [_iFlySpeechUnderstander setParameter:[IATConfig sharedInstance].language forKey:[IFlySpeechConstant LANGUAGE]];
+//    twoButton.selected=YES;
+//    threeButton.selected=NO;
+//    homeButton.selected=NO;
+//    fourButton.selected=NO;
+//    [IATConfig sharedInstance].language = [IFlySpeechConstant LANGUAGE_ENGLISH];
+//     [_iFlySpeechUnderstander setParameter:[IATConfig sharedInstance].language forKey:[IFlySpeechConstant LANGUAGE]];
 }
 //中译英
 - (IBAction)cnEntranslation:(id)sender {
@@ -504,8 +506,61 @@
     [super viewWillAppear:animated];
     [self initRecognizer];
     [self initSynthesizer];
+    [self initRecognizerC];
 }
+-(void)initRecognizerC{
+    //单例模式，无UI的实例
+    if (_iFlySpeechRecognizer == nil) {
+        _iFlySpeechRecognizer = [IFlySpeechRecognizer sharedInstance];
+        
+        [_iFlySpeechRecognizer setParameter:@"" forKey:[IFlySpeechConstant PARAMS]];
+        
+        //设置听写模式
+        [_iFlySpeechRecognizer setParameter:@"iat" forKey:[IFlySpeechConstant IFLY_DOMAIN]];
+    }
+    _iFlySpeechRecognizer.delegate = self;
+    
+    if (_iFlySpeechRecognizer != nil) {
+        IATConfig *instance = [IATConfig sharedInstance];
+        
+        //设置最长录音时间
+        [_iFlySpeechRecognizer setParameter:instance.speechTimeout forKey:[IFlySpeechConstant SPEECH_TIMEOUT]];
+        //设置后端点
+        [_iFlySpeechRecognizer setParameter:instance.vadEos forKey:[IFlySpeechConstant VAD_EOS]];
+        //设置前端点
+        [_iFlySpeechRecognizer setParameter:instance.vadBos forKey:[IFlySpeechConstant VAD_BOS]];
+        //网络等待时间
+        [_iFlySpeechRecognizer setParameter:@"20000" forKey:[IFlySpeechConstant NET_TIMEOUT]];
+        
+        //设置采样率，推荐使用16K
+        [_iFlySpeechRecognizer setParameter:instance.sampleRate forKey:[IFlySpeechConstant SAMPLE_RATE]];
+        
+        if ([instance.language isEqualToString:[IATConfig chinese]]) {
+            //设置语言
+            [_iFlySpeechRecognizer setParameter:instance.language forKey:[IFlySpeechConstant LANGUAGE]];
+            //设置方言
+            [_iFlySpeechRecognizer setParameter:instance.accent forKey:[IFlySpeechConstant ACCENT]];
+        }else if ([instance.language isEqualToString:[IATConfig english]]) {
+            [_iFlySpeechRecognizer setParameter:instance.language forKey:[IFlySpeechConstant LANGUAGE]];
+        }
+        //设置是否返回标点符号
+        [_iFlySpeechRecognizer setParameter:instance.dot forKey:[IFlySpeechConstant ASR_PTT]];
+        
+    }
+    
+    //初始化录音器
+    if (_pcmRecorder == nil)
+    {
+        _pcmRecorder = [IFlyPcmRecorder sharedInstance];
+    }
+    
+    _pcmRecorder.delegate = self;
+    
+    [_pcmRecorder setSample:[IATConfig sharedInstance].sampleRate];
+    
+    [_pcmRecorder setSaveAudioPath:nil];    //不保存录音文件
 
+}
 -(void)dataSouse:(NSString *)key Value:(NSString *)value{
     NSDictionary *dict;
     if ([key isEqualToString:@"weixin"]) {
@@ -516,6 +571,27 @@
     
     [_resultArray addObject:dict];
     [homeTableView reloadData];
+}
+//语音听写
+#pragma mark - IFlyPcmRecorderDelegate
+
+- (void) onIFlyRecorderBuffer: (const void *)buffer bufferSize:(int)size
+{
+    NSData *audioBuffer = [NSData dataWithBytes:buffer length:size];
+    
+    int ret = [self.iFlySpeechRecognizer writeAudio:audioBuffer];
+    if (!ret)
+    {
+        [self.iFlySpeechRecognizer stopListening];
+        
+       
+        
+    }
+}
+
+- (void) onIFlyRecorderError:(IFlyPcmRecorder*)recoder theError:(int) error
+{
+    
 }
 
 - (void)viewDidLoad {
