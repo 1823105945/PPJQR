@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseNaviViewController : UINavigationController
-
+//liwe现在开始解决冲突啊
+//首先你提交前要把你代码提交到本地
 @end
