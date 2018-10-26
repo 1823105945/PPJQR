@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseNaviViewController : UINavigationController
-
+ 京东方尽快
+ 
 @end
