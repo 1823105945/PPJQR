@@ -19,8 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    修改这里
     // Do any additional setup after loading the view, typically from a nib.
 }
+
 
 - (IBAction)loginClock:(id)sender {
     if (self.userNameField.text.length==0) {
